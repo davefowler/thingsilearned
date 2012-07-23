@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Plone Blogging </title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="blogging">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+				<div class="row">
+				  <div class="span6">
+					<h3>ThingsILearned <small>By Dave Fowler</small></h3>				  </div>
+				  <div class="span2">
+															<nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about.html">
+                About
+            </a>
+						        </li>    </ul>
+</nav>
+										</ul>
+				  </div>
+				</div>
+			  </div>          </header>
+          <section class="content">
+          <div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <div class='page-header'>
+		 	  <h1>Plone Blogging </h1>
+		 </div>
+		 <p>Evolution is a journey which everything goes through. Yep everything. In fact I sometimes feel it would be much better to be in the shoes of a software framework instead of being a human when it comes to adventure and changing to adapt with the surrounding environment. I would like to just talk a little about one such small evolutionary process in the life of an Open Source Content Management System (CMS) - Plone. There are various contending add-on products for implementing blogging in Plone, and I hope Dave can assimilate the best of all the technologies during his GoogleSOC in order to implement commenting infrastructure for Plone.</p>
+<p>Some of the stable implemented add-ons for plone are Quills, EasyBlog, and qPloneBlog. EasyBlog provides the basic framework in order to make blogging possible, with plethora of security and visibility configurations for the user or group of users. It also provides some of the other basic utilities of blogging, such as archiving, trackback etc. but that is about as far as it can go. Some of the other add-ons - Quills and qPloneBlog go further and provide pinging support, Blogger API support, track back pings etc. However, some of the features stand apart in both Quills and qPloneBlog. While qPloneBlog provides RSS support to disseminate information, Quills provides blog aggregation support, which can be used for blog searches more easily and efficiently. Summarizing the features:</p>
+<p><em>Quills:</em>
+Features:</p>
+<ul>
+<li>
+<p>Archival entry paths. Access blog archives via standard paths such as http://example.com/myblog/archive/2004/04/06/</p>
+</li>
+<li>
+<p>Topics with descriptions and images</p>
+</li>
+<li>
+<p>BloggerAPI support for remote posting</p>
+</li>
+<li>
+<p>Track Back Pings</p>
+</li>
+<li>
+<p>Visitors can leave comments on blog entries, optionally require registration to limit "Comment Spam"</p>
+</li>
+<li>
+<p>Unlimited Authors, Blogs per Author, and Authors per Blog</p>
+</li>
+<li>
+<p>Site-wide blog aggregator</p>
+</li>
+<li>
+<p>Blog Planets for groups</p>
+</li>
+<li>
+<p>Multiple topics and advanced topic searching, with simple URIs such as http://example.com/myblog/topics/work/project/</p>
+</li>
+</ul>
+<p><em>EasyBlog:</em>
+Features</p>
+<ul>
+<li>
+<p>Multiuser/Multiblogs</p>
+</li>
+<li>
+<p>Categories</p>
+</li>
+<li>
+<p>Monthly archives</p>
+</li>
+<li>
+<p>Trackbacks</p>
+</li>
+</ul>
+<p>Receiving</p>
+<ul>
+<li>
+<p>allow/disallow (per blog/entry)</p>
+</li>
+<li>
+<p>show/hide (per blog/entry)</p>
+</li>
+<li>
+<p>moderate yes/no</p>
+</li>
+<li>
+<p>blacklist: always to be reviewed</p>
+</li>
+</ul>
+<p>Sending</p>
+<ul>
+<li>
+<p>autodetection (per blog/entry)</p>
+</li>
+<li>
+<p>logfile</p>
+</li>
+<li>
+<p>Comments</p>
+</li>
+<li>
+<p>allow/disallow (per blog/entry)</p>
+</li>
+<li>
+<p>show/hide (per blog/entry)</p>
+</li>
+<li>
+<p>moderate yes/no</p>
+</li>
+<li>
+<p>preview yes/no</p>
+</li>
+<li>
+<p>HTML tags/attributes handling</p>
+</li>
+<li>
+<p>blacklist: always to be reviewed</p>
+</li>
+</ul>
+<p><em>q Plone Blog:</em>
+Features :</p>
+<ul>
+<li>
+<p>pinging functionality with enhanced options.</p>
+</li>
+<li>
+<p>RSS2 support altogether with audio and video enclosures</p>
+</li>
+<li>
+<p>Technorati tags</p>
+</li>
+<li>
+<p>TrackBack functionality</p>
+</li>
+<li>
+<p>Google AdSense management included into blog layout</p>
+</li>
+<li>
+<p>blogging APIs support</p>
+</li>
+<li>
+<p>trackbacks blacklisting control</p>
+</li>
+<li>
+<p>included popular bookmarklets icons layout</p>
+</li>
+</ul>
+<p>Hopefully Dave can pull of integration off all such generic blogging utilities into one neat infrastructure to provide plone users another reason to rejoice. Right Dave?</p>
+<p>Priyesh</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

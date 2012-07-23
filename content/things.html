@@ -1,0 +1,12 @@
+---
+extends: base.j2
+default_block: main
+title: Things I Learned
+description: Here's a list of some things I've learned.
+---
+{% from "macros.j2" import render_excerpt with context %}
+<section class="blog_excerpt">
+{% for thing in site.content.walk_resources_sorted_by_date() %}
+  {{ render_excerpt(thing, 'post') }}
+{% endfor %}
+</section>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>On Productivity, Organization and Tools</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="on-productivity-organization-and-tools">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <h1>ThingsILearned</h1>
+            <h3>Something new every day... or so.</h3>                              <nav class=main_nav>
+    <ul>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about.html">
+                About
+            </a>
+        </li>    </ul>
+</nav>
+                    </header>
+          <section class="content">
+          
+<div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <h1>On Productivity, Organization and Tools</h1>
+		 
+		 <p>I've been a fanatic about finding the best ways to organize my life and stay "on top of things".  There are a million articles online on how to go about this. I've read my fare share of these and tried a lot of the methods out.  Usually something ends up working decent for a while and then I either burn out or lose discipline in it.  So I pick up some other method or just deal with a more chaotic productivity schedule.</p>
+<p>I never get too disappointed when one doesn't work out as usually said method was proposed by some blogger who seemed to only have recently (and likely temporarily) gotten their shit together and decided to tell the world about it.  So there wasn't too much of an expectation going in, but its often a bit frustrating to me to have the advice and tips given out so confidently.</p>
+<p>The articles are usually written in a way that makes their method sound like the writer has been practicing this for years and achieved great success/peace with the workflow they deal with.  But I have never met a person who has found such success.</p>
+<p>There are a thousand different TODO apps on the web and for download.  Each one will tell you that their tool is the best to keep organized and productive.  There are even more authors and bloggers.</p>
+<p>In the end nothing has worked near as well for me as a blank notebook and a pen.  Sometimes a planner helps when my days are more about scheduled meetings and less about development time, but planners are just paper with a different set of lines.</p>
+<p>So I guess the thing that I learned hear is that keeping organized and on top of things is a constant struggle and there's no perfect fix for it.  Its just the nature of the game, and if you accept that it takes time and some effort then the whole process becomes a lot less frustrating and a lot less time is wasted trying out so many different tools.</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

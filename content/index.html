@@ -1,0 +1,27 @@
+---
+extends: base.j2
+default_block: 
+title: ThingsILearned.com
+description: Something new every day... or so.
+---
+{% block main %}
+<style>
+body .hero-unit {
+   margin-top: 100px;
+}}
+body .page-header {
+   border-bottom: 0px;
+}
+</style>
+
+  <div class='hero-unit'>
+	<div class='page-header'>
+	  <h1>ThingsILearned 	<small>By Dave Fowler</small></h1>
+	</div>
+  
+  <p>This is a place where I write out the things I've learned so that I can share them with others, remember them, and deepend my understanding.</p>
+
+</div>
+{% endblock %}
+
+{% block pageheader %}&nbsp;{% endblock %}

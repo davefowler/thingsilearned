@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>"I have a Startup" Midwest vs. Bay Area</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="i-have-a-startup-midwest-vs-bay-area">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <h1>ThingsILearned</h1>
+            <h3>Something new every day... or so.</h3>                              <nav class=main_nav>
+    <ul>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about.html">
+                About
+            </a>
+        </li>    </ul>
+</nav>
+                    </header>
+          <section class="content">
+          
+<div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <h1>"I have a Startup" Midwest vs. Bay Area</h1>
+		 
+		 <p>Yesterday I posted my article to one of my other blogs, <a href="http://LeavingCorporate.com">LeavingCorporate.com</a>. It is called</p>
+<h3>["I have a Startup" Midwest vs. Bay Area</h3>
+<p>](http://leavingcorporate.com/2008/12/30/i-have-a-startup-midwest-vs-bay-area/)</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

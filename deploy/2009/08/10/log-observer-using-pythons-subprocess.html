@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Log Observer using Python's subprocess</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="log-observer-using-pythons-subprocess">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+				<div class="row">
+				  <div class="span6">
+					<h3>ThingsILearned <small>By Dave Fowler</small></h3>				  </div>
+				  <div class="span2">
+															<nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about.html">
+                About
+            </a>
+						        </li>    </ul>
+</nav>
+										</ul>
+				  </div>
+				</div>
+			  </div>          </header>
+          <section class="content">
+          <div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <div class='page-header'>
+		 	  <h1>Log Observer using Python's subprocess</h1>
+		 </div>
+		 <p>Today I needed to write a wrapper around a program that would examine the stdio and respond immediately to certain results.  The task was handled nicely with a python script using <a href="http://pydoc.org/2.4.1/subprocess.html">subprocess</a>.</p>
+<p>There isn't a lot of documentation examples on it so to figure it out I wrote this small test app and I thought I'd share it here.</p>
+<p>To begin I wrote a simple script that prints out "Program has run for x seconds." every x seconds to simulate a long running and noisy script that I might be observing.  Here is the code.</p>
+<p>sample.py</p>
+<p>[sourcecode language='python']
+import sys, time</p>
+<p>class FlushFile(object):
+   """Write-only flushing wrapper for file-type objects."""
+   def <strong>init</strong>(self, f):
+       self.f = f
+   def write(self, x):
+       self.f.write(x)
+       self.f.flush()</p>
+<h1>Replace stdout with an automatically flushing version</h1>
+<p>sys.stdout = FlushFile(sys.<strong>stdout</strong>)</p>
+<p>for i in xrange(100):
+   sys.stdout.write("Program has run for %d seconds.\n" % i)
+   time.sleep(1)
+[/sourcecode]</p>
+<p>The main part of the program is the last 3 lines where we write "Program has run for %d seconds" 100 times and pause for a second between each.</p>
+<p>The FlushFile object is simply a <a href="http://stackoverflow.com/questions/527197/intercepting-stdout-of-a-subprocess-while-it-is-running">nice hack</a> to overwrite the default stdout object to ensure that the buffer is flushed every time it is written to.  Without the hack our log checker would simply be hung up until the task is fully completed instead of being able to read each line of the output as it is written.</p>
+<p>The output looks like this</p>
+<blockquote></blockquote>
+<blockquote>
+<pre><code>$ python sample.py
+Program has run for 0 seconds.
+Program has run for 1 seconds.
+Program has run for 2 seconds.
+.... # and on until 100 seconds
+</code></pre>
+</blockquote>
+<p>Next I wrote the wrapper which executes the above sample.py script as a python subprocess and watches the output.  For this example I check whether a '4' exists in the output.  If it is I restart the script therefore creating a continual loop counting between 0 and 4 seconds.</p>
+<p>observer.py</p>
+<p>[sourcecode language='python']</p>
+<p>import subprocess, os, signal
+cmnd = "python sample.py" #change this line to run your script
+p, line = True, 'start'</p>
+<p>while True:
+   p = subprocess.Popen(cmnd, shell=True, stdout=subprocess.PIPE)</p>
+<p>while line:
+       line = p.stdout.readline()
+       print "line is:", line
+       if line.count('4'):
+           print "restarting the process"
+           os.kill(p.pid, signal.SIGUSR1)
+           line = True
+           break</p>
+<p>del p
+[/sourcecode]</p>
+<p>The output is continually checked in the 'while line:' loop of line 8.  In this example its printed out for our convenience.  Like 11 checks for the character '4' somewhere in the output.  If it does exist it kills the process and the stdout reading loop.</p>
+<p>That loop is wrapped in another however that simply restarts the process all over again.  The resulting output is</p>
+<blockquote></blockquote>
+<blockquote>
+<pre><code>$ python observer.py
+line is: Program has run for 0 seconds.
+line is: Program has run for 1 seconds.
+line is: Program has run for 2 seconds.
+line is: Program has run for 3 seconds.
+line is: Program has run for 4 seconds.
+restarting the process
+line is: Program has run for 0 seconds.
+line is: Program has run for 1 seconds.
+line is: Program has run for 2 seconds.
+line is: Program has run for 3 seconds.
+line is: Program has run for 4 seconds.
+restarting the process
+line is: Program has run for 0 seconds.
+.....
+</code></pre>
+</blockquote>
+<p>So now we have a nice template for wrapping and responding to executables!</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

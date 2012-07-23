@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Organized Database Designing</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="organized-database-designing">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <h1>ThingsILearned</h1>
+            <h3>Something new every day... or so.</h3>                              <nav class=main_nav>
+    <ul>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about.html">
+                About
+            </a>
+        </li>    </ul>
+</nav>
+                    </header>
+          <section class="content">
+          
+<div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <h1>Organized Database Designing</h1>
+		 
+		 <p>This isn't an article on good practices in database design.  We definitely wouldn't be the guys to ask about that.  However, after many days of deliberation, and by deliberation I mean yelling, calling each other various names, and wasting several tablets of paper we have finally completed and have some suggestions on how to keep organized in the designing process.  The suggestions are organized in the following steps.  Hopefully when you're done you'll have a database to be proud of like these nerdy guys here:</p>
+<p><a href="http://thingsilearned.files.wordpress.com/2007/07/nerds.jpg"><img alt="nerds doing database design" src="http://thingsilearned.files.wordpress.com/2007/07/nerds.jpg" /></a></p>
+<p><strong>1. Realization: </strong> First you need to realize that the database design is a lengthy task that grows exponentially with the complexity of your web app.  Make sure you allot yourself a large chunk of time and patience for the task.</p>
+<p><strong>2. Site Planning:</strong>  Before making your tables you have to have your entire site organized.  Its best to draw out all of the viewable page types the viewer will see and get a concrete set of high level functions that the user will be able to do.  Its best to minimize these down to base functionality.  Forget about the million bells and whistles that you might attach on in a year or two, and concentrate on making just the bike .... err webapp.  After simplifying the main functionality you'll find the database design much simpler to keep in your head and its usually easy to attach on the extra stuff later.</p>
+<p><strong>3. Research:</strong> If you're not too good at database design, know very little about how SQL servers work or don't know what manytomany relationships are you'd do yourself a favor by reading up on it.  Here are a <a href="http://www.google.com/search?q=database+design&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a">few resources</a>.</p>
+<p><strong>4. Divide and Conquer:</strong>  Having a good grasp of what you're making and a feel for SQL servers its time to get to it!  We want to emphasize, that no matter how big or small your group is, no matter how smart or dumb they are, even if you have a pacifist on your team, its best to split up when designing the database.  Each of you go to your own corners and design what you think will work.  Then, after a day or however long it takes you, get back together and share what you've got.  You'll find that each of you are missing a few things and many different ways of looking at the same thing.  Its best to merge these ideas at the end when everyone has a good grasp of what they've designed.  Its bad to merge them as you build, sparking debates that go on way too long and make everything feel larger and more complicated than it really is.</p>
+<p><strong>5. Cards:</strong>  When designing your tables we found it worked best to write them on note cards and rearrange them on the table.  Its really easy to edit or throw out cards.  Its also easy to visualize the different components and rearrange them in-front of you to fit better in your brain.  When you're done, tape them to a piece of tag board and draw lines to visually demonstrate the relationships between the different tables.  It will also look much prettier when you go back and meet with the rest of your group.</p>
+<p><strong>6. Celebrate:</strong> You've accomplished a large amount of work!  It might not seem so.  You were expecting to be well into your hacking by now, but hey, it takes a really long time and now you have a great platform to build from.  Make sure you listen to a happenin' tune and do a little jig.  This part is best done with the group.</p>
+<p>Dave and Priyesh</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

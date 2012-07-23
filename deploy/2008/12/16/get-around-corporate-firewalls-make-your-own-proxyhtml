@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Get Around Corporate Firewalls: Make Your Own Proxy</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="get-around-corporate-firewalls-make-your-own-proxy">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <h1>ThingsILearned</h1>
+            <h3>Something new every day... or so.</h3>                              <nav class=main_nav>
+    <ul>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about.html">
+                About
+            </a>
+        </li>    </ul>
+</nav>
+                    </header>
+          <section class="content">
+          
+<div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <h1>Get Around Corporate Firewalls: Make Your Own Proxy</h1>
+		 
+		 <p>I've been doing some research into all kinds of proxies lately.  One of the simple examples I tried out has a great working use case.  It is especially useful if you are in the following situation.</p>
+<ol>
+<li>Your work blocks/firewalls certain websites and this bugs you.</li>
+<li>You have a server somewhere that you can load code onto.</li>
+</ol>
+<p>That's everyone right?  I thought so.  You need to set up a twisted proxy on your server.  The benefits of running your own proxy are numerous: If only you are using it, your work will probably never block it, if they do its easy to change your IP, and you'll know that your browsing and login information are safe.  Its also pretty simple to set up; here's how.</p>
+<p><strong>1. Load the Code</strong></p>
+<p>Log into your server and make a file called proxy.py with the following code in it [<a href="http://wiki.python.org/moin/Twisted-Examples">original source</a>]</p>
+<blockquote>
+<p>from twisted.web import proxy, http
+from twisted.internet import reactor
+from twisted.python import log
+import sys
+log.startLogging(sys.stdout)</p>
+</blockquote>
+<p>class ProxyFactory(http.HTTPFactory):
+def <strong>init</strong>(self):
+http.HTTPFactory.<strong>init</strong>(self)
+self.protocol = proxy.Proxy</p>
+<p>reactor.listenTCP(8080, ProxyFactory())
+reactor.run()</p>
+<p>Don't worry about what all that does.  I'm still working on the details myself.   It is important to know however that '8080' is the port number.  If you would like to use a different port for some reason change the number in the code.  Now you need to get the twisted library and run the script:</p>
+<blockquote>
+<p>sudo easy_install twisted
+python proxy.py &amp;</p>
+</blockquote>
+<p>The proxy is now running.  Make sure that script keeps running while testing the following or skip to part 3 where you set this script up to run in the background on load.</p>
+<p><strong>2. Set Your Browser To Use the Proxy</strong></p>
+<p>The next step is to setup your browser to use a proxy for its internet access.  In Firefox goto Preferences-&gt;Advanced-&gt;Network-&gt;Settings.  You should get something that looks similar to this:</p>
+<p><img alt="ff-advanced1" src="http://thingsilearned.files.wordpress.com/2008/12/ff-advanced1.png?w=300" /></p>
+<p>The Default Setting is "No proxy".  You want to hook it up to your proxy so instead select "Manual proxy configuration".  Now in the HTTP Proxy field paste the ip address of your server and in Port enter the port you set your script to use (default 8080).</p>
+<p>Press OK and start surfing the web!  You should now be able to access all the sites that your server can access, instead of just the ones that your boss decides are okay.</p>
+<p>If you use a browser other than Firefox here are external instructions for changing the proxy settings:  <a href="http://support.microsoft.com/kb/135982">Internet Explorer</a>, <a href="http://www.lib.msu.edu/proxy/safari.html">Safari</a>, <a href="http://www.opera.com/support/kb/view/332/">Opera </a></p>
+<p><strong>3. Configure the Proxy To Load on Boot</strong></p>
+<p>As a last step you have to setup your proxy script to load when your computer starts up and to continue running.  I will show you how to do it in ubuntu.  If you're using another OS you'll have to figure it out yourself.  When you do please leave instructions in the comments!</p>
+<blockquote>
+<p>sudo mv proxy.py /usr/local/bin
+echo "python /usr/local/bin/proxy.py" &gt; /etc/init.d/proxy
+chmod +x /etc/init.d/proxy
+update-rc.d proxy defaults
+/etc/init.d/proxy &amp;</p>
+</blockquote>
+<p>That's it! Happy Browsing :)!</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

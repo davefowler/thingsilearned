@@ -1,0 +1,50 @@
+{% macro render_excerpt(res, class=None) %}
+{% refer to res.relative_path as post %}
+<h3>
+    <a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a>
+    <a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
+	<br>
+    <small class="subtext">
+	d:        {{ res.meta.date.strftime('%a, %d %b %Y') }}
+        <time datetime="{{ res.meta.date.strftime('%Y-%m-%d') }}">
+    	    {{ res.meta.date.strftime('%a, %d %b %Y') }}
+        </time>
+    {% for category in res.meta.categories %}
+        <a href="{{ category }}">{{ category }}</a>{% if not loop.last %},{% endif %}
+    {% endfor %}
+    </small>
+</h3>
+{% endmacro %}
+
+{% macro render_nav(menu, cls=None) -%}
+{% if menu -%}
+<nav {{'class='~cls if cls }}>
+    <ul class='breadcrumb'>
+        {% for item in menu -%}
+        {% set active = False -%}
+        {% if item.type == 'page' -%}
+            {% set active = (resource.url ==
+                site.content.resource_from_relative_path(item.url).url) -%}
+        {% else -%}
+            {% set active = (node ==
+                site.content.node_from_relative_path(item.url)) -%}
+        {%- endif %}
+        {% set classes = ['button', 'white'] -%}
+        {% do classes.append('active') if active -%}
+        {% do classes.append(item.css_class) if item.css_class -%}
+        <li>
+            {% if resource.url != item.url %}<a title="{{ item.description }}"
+                class="{{ classes|join(' ') }}"
+                href="{{ content_url(item.url) }}">
+                {{ item.name }}
+            </a>
+			{% else %}
+			    {{ item.name }}
+			{% endif %}
+			{% if not loop.last %}<span class="divider">/</span>{% endif %}
+        </li>
+        {%- endfor %}
+    </ul>
+</nav>
+{%- endif %}
+{%- endmacro %}

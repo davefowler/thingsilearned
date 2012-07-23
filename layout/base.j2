@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  {% block starthead %}{% endblock starthead %}
+  <meta charset="{{ resource.meta.charset }}">
+  <meta http-equiv="X-UA-Compatible" content="{{ resource.meta.compatibility }}">
+
+  <title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
+  <meta name="description" content="{{ resource.meta.description }}">
+  <meta name="author" content="{{ resource.meta.author }}">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="{{ resource.meta.viewport }}">
+
+  {% block favicons %}
+  <link rel="shortcut icon" href="{{ media_url('/favicon.ico') }}">
+  {% endblock favicons %}
+
+  {% block css %}
+  <link rel="stylesheet" href="{{ media_url('css/til.css') }}">
+  <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap-responsive.css') }}">
+  {% endblock css %}
+
+  {% block headjs %}
+  {% endblock headjs %}
+
+  {% block endhead %}{% endblock endhead %}
+</head>
+<body id="{{ resource.meta.id if resource.meta.id else resource.slug }}">
+  {% block content %}
+  <div class="container">
+      {% block container %}
+      <div id="main" role="main">
+          <header class="banner clearfix">
+          {% block header -%}
+			  <div class='header'>
+				<div class="row">
+				  <div class="span6">
+					{% block pageheader %}<h3>ThingsILearned <small>By Dave Fowler</small></h3>{% endblock %}
+				  </div>
+				  <div class="span2">
+					{% block nav %}
+					{% from "macros.j2" import render_nav with context %}
+					{{ render_nav(menu) }}
+					{% endblock %}
+					</ul>
+				  </div>
+				</div>
+			  </div>
+          {%- endblock %}
+          </header>
+          <section class="content">
+          {% block main %}
+          {% endblock main %}
+          </section>
+      </div>
+    {% endblock container %}
+  </div> <!--! end of #container -->
+  {% endblock content%}
+  {% block js %}
+
+  {% block scripts %}
+  <script type="text/javascript" src="{{ media_url('bootstrap/js/bootstrap.js') }}"></script>
+  {% endblock scripts %}
+
+  {% block analytics %}
+  {% include "analytics.j2" %}
+  {% endblock analytics %}
+  {% endblock js %}
+</body>
+</html>
