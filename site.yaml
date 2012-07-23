@@ -58,7 +58,7 @@ suffix:
 sorter:
     date:
         attr:
-            - meta.date
+            - meta.slug # Note: change to meta.date once its working
         reverse: true
         filters:
             meta.status: publish
