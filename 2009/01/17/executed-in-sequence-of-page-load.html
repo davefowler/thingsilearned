@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title> Executed In Sequence of Page Load</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="executed-in-sequence-of-page-load">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+                <div class="row">
+                  <div class="span6">
+                    <h3>ThingsILearned <small>By Dave Fowler</small></h3>                  </div>
+                  <div class="span2">
+                                                            <nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about">
+                About
+            </a>
+						        </li>    </ul>
+</nav>
+                                        </ul>
+                  </div>
+                </div>
+              </div>          </header>
+          <section class="content">
+          <div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <div class='page-header'>
+		 	  <h1> Executed In Sequence of Page Load</h1>
+		 </div>
+		 <p>I was researching some javascript capabilities earlier and from a <a href="http://en.wikipedia.org/wiki/Comet_(programming)">wikipedia article on Comet</a> learned this</p>
+<p><em>"browsers render HTML pages incrementally, each </em><code>_script_</code><em> tag is executed as it is received.__"</em></p>
+<p>Awesome!  This means not just that you can execute javascript before and as the page is loading, but you choose WHEN/WHERE to run it.  To test it out I made the following example.</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+  &lt;div&gt;Original&lt;/div&gt;
+  &lt;div&gt;Original&lt;/div&gt;
+  &lt;script&gt;
+    var link, links;
+    links = document.getElementsByTagName( 'div' );
+    for (l in links) { links[l].innerHTML = 'Edited'; }
+  &lt;/script&gt;
+  &lt;div&gt;Original&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The inserted script collects all 'div' elements in the document and changes them to instead say "Edited".  The code outputs the following result.</p>
+<pre><code>Edited
+Edited
+Original
+</code></pre>
+<p>Because the script is executed in the order that the page is loaded, the first two divs get edited, but the last one which didn't exist at the time the script was run, was not edited.  Some clever things can be done with this.  I'll blog more about it later.</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

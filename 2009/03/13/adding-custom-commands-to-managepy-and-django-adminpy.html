@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Adding Custom Commands to manage.py and django-admin.py</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="adding-custom-commands-to-managepy-and-django-adminpy">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+                <div class="row">
+                  <div class="span6">
+                    <h3>ThingsILearned <small>By Dave Fowler</small></h3>                  </div>
+                  <div class="span2">
+                                                            <nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about">
+                About
+            </a>
+						        </li>    </ul>
+</nav>
+                                        </ul>
+                  </div>
+                </div>
+              </div>          </header>
+          <section class="content">
+          <div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <div class='page-header'>
+		 	  <h1>Adding Custom Commands to manage.py and django-admin.py</h1>
+		 </div>
+		 <p>In Django it is very straight forward to add extra commands to the manage.py and django-admin.py scripts.  The Django Documentation describes the <a href="http://docs.djangoproject.com/en/dev/howto/custom-management-commands/">process</a> but gives no examples.  I like examples so I'm writing this for others.</p>
+<p>In the past I'd add these  to make stand alone scripts that used the Django libraries.</p>
+<p>from django.conf import settings
+from django.core.management import setup_environ
+setup_environ( settings )</p>
+<p>The method works well but I find it cleaner to add commands to the manage and django-admin scripts instead of having several stand alone scripts.  The desired effect is to be able to run</p>
+<p><strong>$ ./manage.py your_command_name</strong></p>
+<p>instead of python your_command_name.py.  Big difference?  No...  But I think on a large project it adds organization and its some sort of a standard in the event that others will be using your code.</p>
+<p>In the app which the command is used for make the following directory structure:</p>
+<pre><code>    management/
+        __init__.py
+        commands/
+            __init__.py
+            your_command_name.py
+</code></pre>
+<p>Then in your file (your_command_name.py) paste the following code, puting the functions to run in the handle_noargs function.</p>
+<p>from django.core.management.base import NoArgsCommand</p>
+<p>class Command(NoArgsCommand):
+help = "Describe the Command Here"
+def handle_noargs(self, **options):
+&lt; your code here &gt;</p>
+<p>That's it!  You can also do some more complicated functionality with command options.  Take a look at commands listed in /django/core/management/commands for examples there.</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

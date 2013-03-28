@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Some Notes and Requests on Django Signals</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="some-notes-and-requests-on-django-signals">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+                <div class="row">
+                  <div class="span6">
+                    <h3>ThingsILearned <small>By Dave Fowler</small></h3>                  </div>
+                  <div class="span2">
+                                                            <nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about">
+                About
+            </a>
+						        </li>    </ul>
+</nav>
+                                        </ul>
+                  </div>
+                </div>
+              </div>          </header>
+          <section class="content">
+          <div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <div class='page-header'>
+		 	  <h1>Some Notes and Requests on Django Signals</h1>
+		 </div>
+		 <p><img alt="" src="http://www.swanniganandwright.com/3.0/test/phone-wires.jpg" />I've finally gotten around to playing with the <a href="http://docs.djangoproject.com/en/dev/topics/signals/">Django Signals</a>.  I've been pleased so far but I feel its currently missing a few key features.</p>
+<p>Some background: Django Signals allows developers to more easily break up their code into separate components which allows much greater freedom and organization.  Often as a web application expands you add more an more functionality to each of the events.  When a new user is created for example the program might need to spin off a few emails, maybe search for whether any of their friends are the site, store an extra statistic, etc...</p>
+<p>When adding or removing these features developers would previously have to paste more code into their create_new_user function.  Now however developers can creaet a Django Signal in creaet_new_user function and then build other functions (sending email, storing stats, etc) as seperate listeners for that signal.</p>
+<p>It makes everything more modular.  Lots of other languages have this.  If you're a hardware developer its similar to interupts, if you're a javascript developer its similar to events.</p>
+<p>So reading about them I've been excited about the possibilities and have been looking forward to putting them to use.  I've got to say its incredibly simple, works great and I'm going to start using them all the time.</p>
+<p>That said there is a lot of growth yet to be done in this area.  With that in mind I'm going to make two requests fully aware of the fact that most people will say "add it yourself" or "just use the patch" or "roll your own".  Some of which I will ofcourse do, still I continue to blog...</p>
+<h4>Request: ManyToMany Signals</h4>
+<p>A great feature is that django automatically has signals set up for many of the common tasks.  There are signals fired when objects are saved and deleted and when requests are made and finished.  Currently there is no signals for ManyToMany relationships.  There is a <a href="http://code.djangoproject.com/ticket/5390">ticket</a> and a <a href="http://code.djangoproject.com/attachment/ticket/5390/complete-patch.diff">patch</a> on the issue but it has not been released in the trunk of yet.</p>
+<p>A simple example with <a href="http://socialbrowse.com">Socialbrowse</a> is in following other people in the network.  In Django following someone is easy:</p>
+<pre><code>userprofile.following.add( other_userprofile )
+</code></pre>
+<p>Man it'd be great if there was a signal on that!  Unfortunately I had to make a wrapper funtion in UserProfile.</p>
+<pre><code>import django.dispatch
+followed_signal = django.dispatch.Signal(providing_args=["followed", ])
+def follow(self, dude_to_follow):
+  """ follow the input &lt;dude_to_follow&gt; """
+  self.following.add( dude_to_follow )
+
+  # Send out a django signal
+  followed_signal.send(sender = self, followed = dude_to_follow)
+</code></pre>
+<p>I know, its not a big deal, I'm a big baby, but that stuff does add up eventually.  Hopefully <a href="http://code.djangoproject.com/ticket/5390">Ticket #5390</a> will be merged shortly.  The comments seem to suggest that its ready.</p>
+<h4>Request: Asynchronous Signals</h4>
+<p>It seems that I'm <a href="http://www.mercurytide.co.uk/news/article/django-signals/">not the only one to assume</a> that Django Signals created Asynchronous tasks.  If you come from a Javascript or Hardware world you would assume asycronous signals, as both JS events and hardware interrupts are asyncronous.</p>
+<p>Unfortunately Django Signals are not.  That's great in many cases, but I think it should support both. Sending emails for example tends to take a sigificant amount of time, mostly spent waiting around.  It would be great if the request could continue on and return, independant of the email task, instead of having to wait for it to complete.</p>
+<p>The result would be a much faster experience for the user, and I think Django Signals is the place to put that type of functionality in.   The ideal interface would be specifying an extra input 'async' when registering a listener.  If true the process calling the signal would not wait for the listener to finish.</p>
+<p>Continuing with the follow example above the code would look something like this:</p>
+<pre><code>def email_follow_notification(sender, **kwargs):
+...    # do some emailing here
+followed_signal.connect(email_follow_notification, async = True)
+</code></pre>
+<p>The email_follow_notification function would then be run in a seperate process, allowing everything else to continue on without waiting.</p>
+<p>Those are my notes for now.  I'm sure I'll have more and maybe some contributions in the form of real code.</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

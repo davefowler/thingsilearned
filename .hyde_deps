@@ -1,521 +1,74 @@
-!!python/unicode '.hyde_deps': [macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/04/26/a-fresh-new-blog.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/04/26/a-fresh-new-blog/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/04/26/screw-you-a-python-example.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/04/26/screw-you-a-python-example/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/04/26/xcode-shortcuts.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/04/26/xcode-shortcuts/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/05/04/combating-internet-addiction.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/05/04/combating-internet-addiction/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/05/07/emacs-for-macs.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/05/07/emacs-for-macs/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/05/15/separating-reflections-from-a-single-image-using-local-features.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/05/15/separating-reflections-from-a-single-image-using-local-features/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/05/20/starting-toward-probable-failure.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/05/20/starting-toward-probable-failure/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-? !!python/unicode '2007/05/24/diversity-differences-this-world-is-full-of-them-sometimes-also-called-savants-there-are-a-few-extraordinary-people-around-us-who-have-amazing-ability-to-remember-things-daniel-is-one-such-e.markdown'
-: [macros.j2, base.j2, thing.j2, analytics.j2]
-? !!python/unicode '2007/05/24/diversity-differences-this-world-is-full-of-them-sometimes-also-called-savants-there-are-a-few-extraordinary-people-around-us-who-have-amazing-ability-to-remember-things-daniel-is-one-such-e/index.markdown'
-: [macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/05/24/first-grade.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/05/24/first-grade/index.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/05/25/day-1-introduction.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/05/25/day-1-introduction/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/05/29/cimglib-a-simple-image-class-for-png-files.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/05/29/cimglib-a-simple-image-class-for-png-files/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/05/30/200-page-views.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/05/30/200-page-views/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/02/gsoc-plone-comments.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/06/02/gsoc-plone-comments/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/04/blogging.markdown': [macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/04/blogging/index.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/06/07/os-x-terminal-prompt.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/07/os-x-terminal-prompt/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/10/40.markdown': [macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/10/40/index.markdown': [macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/10/food-for-thought-thought-about-food.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/10/food-for-thought-thought-about-food/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/10/xml-syntax-on-emacs.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/06/10/xml-syntax-on-emacs/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/11/batch-jpg-image-resizer.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/11/batch-jpg-image-resizer/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/15/opening-tough-jars-and-bottles-for-tendonitis-sufferers.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/15/opening-tough-jars-and-bottles-for-tendonitis-sufferers/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/19/california.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/06/19/california/index.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/06/20/jaredsim-the-adventure.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/20/jaredsim-the-adventure/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/23/fixing-autocorrect-behavior-in-ms-word.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/23/fixing-autocorrect-behavior-in-ms-word/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/25/jaredhockey-air-hockey-robotic-opponent.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/25/jaredhockey-air-hockey-robotic-opponent/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/06/26/the-facebook-addiction.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/26/the-facebook-addiction/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/29/thingsilearned-user-case.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/06/29/thingsilearned-user-case/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/01/prevent-devices-from-waking-winxp-out-of-standby-mode.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/01/prevent-devices-from-waking-winxp-out-of-standby-mode/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/05/plone-sprint-at-google.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/07/05/plone-sprint-at-google/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/07/06/organized-database-designing.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/07/06/organized-database-designing/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/09/the-dangers-of-a-startup.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/07/09/the-dangers-of-a-startup/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/12/an-energy-drink-recipe-green-tea-pepsi.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/12/an-energy-drink-recipe-green-tea-pepsi/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/15/1-through-n-steps-for-beginning-a-novel.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/15/1-through-n-steps-for-beginning-a-novel/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/18/unconventional-motivation-techniques.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/18/unconventional-motivation-techniques/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/07/26/computers-and-lemonade.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/07/26/computers-and-lemonade/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/08/14/zope3plone-to-django.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/08/14/zope3plone-to-django/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/09/30/electric-fence-on-os-x.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/09/30/electric-fence-on-os-x/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2007/10/05/organized-printfs-with-variadic-macros.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/10/05/organized-printfs-with-variadic-macros/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2007/11/16/christmas-tunes.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2007/11/16/christmas-tunes/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2008/12/16/get-around-corporate-firewalls-make-your-own-proxy.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/16/get-around-corporate-firewalls-make-your-own-proxy/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/16/learning-again.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2008/12/16/learning-again/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2008/12/18/mans-search-for-meaning-of-love.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/18/mans-search-for-meaning-of-love/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/21/how-to-win-friends-and-influence-people.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/21/how-to-win-friends-and-influence-people/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/22/host-your-own-git-repository.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2008/12/22/host-your-own-git-repository/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/27/proportional-image-resize-in-javascript.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/27/proportional-image-resize-in-javascript/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/28/django-adminpy-startproject-unknown-command.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/28/django-adminpy-startproject-unknown-command/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/31/i-have-a-startup-midwest-vs-bay-area.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2008/12/31/i-have-a-startup-midwest-vs-bay-area/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/01/recap-and-new-years-resolutions.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/01/recap-and-new-years-resolutions/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/02/installing-csstidy-and-scons-on-os-x-or-linux.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/02/installing-csstidy-and-scons-on-os-x-or-linux/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/05/relative-url-parser-snippet.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/01/05/relative-url-parser-snippet/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/05/using-subdomains-in-django.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/01/05/using-subdomains-in-django/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/06/django-email-admins-using-different-outgoing-email-address.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/06/django-email-admins-using-different-outgoing-email-address/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/06/sshfs-for-developing-on-a-remote-server.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/06/sshfs-for-developing-on-a-remote-server/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/06/wildcard-subdomains-with-webpagedomainnamescomgodaddycom.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/06/wildcard-subdomains-with-webpagedomainnamescomgodaddycom/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/17/executed-in-sequence-of-page-load.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/17/executed-in-sequence-of-page-load/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/19/javascript-relative-and-absolute-urls.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/19/javascript-relative-and-absolute-urls/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/22/installing-svn-on-ubuntu.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/01/22/installing-svn-on-ubuntu/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/01/26/satchmo-on-ubuntu.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2009/01/26/satchmo-on-ubuntu/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/02/08/setup-safari-web-inspector.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/02/08/setup-safari-web-inspector/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/02/18/traffic-trends-negativity-more-traffic.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/02/18/traffic-trends-negativity-more-traffic/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/03/tripeedo-flight-search-thats-actually-a-search.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/03/tripeedo-flight-search-thats-actually-a-search/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/09/wordpress-domain-change.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/03/09/wordpress-domain-change/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/10/wundrbar-makes-a-wundrful-iphone-app.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/10/wundrbar-makes-a-wundrful-iphone-app/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/13/adding-custom-commands-to-managepy-and-django-adminpy.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/13/adding-custom-commands-to-managepy-and-django-adminpy/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/18/how-to-port-many-django-utilities-backwards.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/18/how-to-port-many-django-utilities-backwards/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/03/25/ec2-elastic-ips-ssh-error.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/03/25/ec2-elastic-ips-ssh-error/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/04/06/paper-or-plastic.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2009/04/06/paper-or-plastic/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/04/12/wanted-generous-blog-designer.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/04/12/wanted-generous-blog-designer/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/04/13/easy_install-uninstalling.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/04/13/easy_install-uninstalling/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/04/14/socialbrowse-on-the-news.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/04/14/socialbrowse-on-the-news/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/03/road-bikes-are-waaaay-better-than-target-bikes.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/03/road-bikes-are-waaaay-better-than-target-bikes/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/03/simple-mysqldb-example.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/05/03/simple-mysqldb-example/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/05/06/some-notes-and-requests-on-django-signals.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/06/some-notes-and-requests-on-django-signals/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/08/testing-ajax-requests-in-django.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/08/testing-ajax-requests-in-django/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/10/drop-database-command-for-django-manager.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/10/drop-database-command-for-django-manager/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/11/using-arguments-in-a-shell-script.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/11/using-arguments-in-a-shell-script/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/21/deploying-moinmoin-on-ubuntu-using-apache-mod_wsgi.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/21/deploying-moinmoin-on-ubuntu-using-apache-mod_wsgi/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/26/gnu-screen-super-basic-tutorial.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/05/26/gnu-screen-super-basic-tutorial/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/06/02/tictactoe-in-jquery.markdown': [macros.j2, base.j2, thing.j2,
-  analytics.j2]
-!!python/unicode '2009/06/02/tictactoe-in-jquery/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/06/03/find-rss-feed-links-with-jquery.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/06/03/find-rss-feed-links-with-jquery/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/06/03/google-ajax-feed-api-example.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/06/03/google-ajax-feed-api-example/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/06/08/new-blog-design-by-amanda-scharlemann.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/06/08/new-blog-design-by-amanda-scharlemann/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/06/09/starting-out-with-comet-orbited-part-1.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/06/09/starting-out-with-comet-orbited-part-1/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/06/25/starting-out-with-comet-orbited-part-2-installation-and-stomp.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/06/25/starting-out-with-comet-orbited-part-2-installation-and-stomp/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/07/21/appengine-example-quick-thoughts.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/07/21/appengine-example-quick-thoughts/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/08/03/starting-out-with-comet-orbited-part-3-e28093-the-client.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/08/03/starting-out-with-comet-orbited-part-3-e28093-the-client/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/08/10/log-observer-using-pythons-subprocess.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/08/10/log-observer-using-pythons-subprocess/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/08/11/socialbrowse-in-the-startribune.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/08/11/socialbrowse-in-the-startribune/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/08/26/forwarding-naked-domains-for-appengine-with-apache.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/08/26/forwarding-naked-domains-for-appengine-with-apache/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2009/09/30/initialize-django-tests.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2009/09/30/initialize-django-tests/index.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2010/01/07/github-and-bitbucket.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2010/01/07/github-and-bitbucket/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2010/01/11/when-can-i-stop-saving-for-retirement.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2010/01/11/when-can-i-stop-saving-for-retirement/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2010/01/27/dynamically-calling-fancybox-from-javascript.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2010/01/27/dynamically-calling-fancybox-from-javascript/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2010/12/01/on-productivity-organization-and-tools.markdown': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2010/12/01/on-productivity-organization-and-tools/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2011/01/05/the-pickledobjectfield-for-object-storage-in-django.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2011/01/05/the-pickledobjectfield-for-object-storage-in-django/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2011/06/07/mailgun-as-an-smtp-server-for-django-apps.html': [macros.j2,
-  base.j2, thing.j2, analytics.j2]
-!!python/unicode '2011/06/07/mailgun-as-an-smtp-server-for-django-apps.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2011/06/07/mailgun-as-an-smtp-server-for-django-apps/index.markdown': [
-  macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode '2012/11/22/javascript-chess-game.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode '2012/11/22/javascript-chess-game/index.markdown': [macros.j2, base.j2,
-  thing.j2, analytics.j2]
-!!python/unicode 'about.html': [macros.j2, base.j2, analytics.j2]
-!!python/unicode 'about/index.markdown': [macros.j2, base.j2, thing.j2, analytics.j2]
-!!python/unicode 'blog/angry-post.html': [blog.j2, base.j2, analytics.j2]
-!!python/unicode 'blog/atom.xml': [atom.j2, macros.j2]
-!!python/unicode 'blog/excerpts.xml': [atom.j2, macros.j2]
-!!python/unicode 'blog/happy-post.html': [blog.j2, base.j2, analytics.j2]
-!!python/unicode 'blog/index.html': [listing.j2, macros.j2, base.j2, analytics.j2]
-!!python/unicode 'blog/sad-post.html': [blog.j2, base.j2, analytics.j2]
-!!python/unicode 'blog/tags/angry.html': [base.j2, tagged_posts.j2, analytics.j2]
-!!python/unicode 'blog/tags/happy.html': [base.j2, tagged_posts.j2, analytics.j2]
-!!python/unicode 'blog/tags/sad.html': [base.j2, tagged_posts.j2, analytics.j2]
-!!python/unicode 'blog/tags/thoughts.html': [base.j2, tagged_posts.j2, analytics.j2]
-!!python/unicode 'index.html': [macros.j2, base.j2, analytics.j2]
-!!python/unicode 'media/bootstrap/css/bootstrap-responsive.css': []
-!!python/unicode 'media/bootstrap/css/bootstrap-responsive.min.css': []
-!!python/unicode 'media/bootstrap/css/bootstrap.css': []
-!!python/unicode 'media/bootstrap/css/bootstrap.min.css': []
-!!python/unicode 'media/bootstrap/docs/assets/css/bootstrap-responsive.css': []
-!!python/unicode 'media/bootstrap/docs/assets/css/bootstrap.css': []
-!!python/unicode 'media/bootstrap/docs/assets/css/docs.css': []
-!!python/unicode 'media/bootstrap/docs/assets/js/README.md': []
-!!python/unicode 'media/bootstrap/docs/assets/js/application.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-affix.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-alert.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-button.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-carousel.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-collapse.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-dropdown.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-modal.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-popover.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-scrollspy.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-tab.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-tooltip.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-transition.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap-typeahead.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/bootstrap.min.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/google-code-prettify/prettify.css': []
-!!python/unicode 'media/bootstrap/docs/assets/js/google-code-prettify/prettify.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/holder/holder.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/html5shiv.js': []
-!!python/unicode 'media/bootstrap/docs/assets/js/jquery.js': []
-!!python/unicode 'media/bootstrap/docs/base-css.html': []
-!!python/unicode 'media/bootstrap/docs/build/index.js': []
-!!python/unicode 'media/bootstrap/docs/build/node_modules/.bin/hulk': []
-!!python/unicode 'media/bootstrap/docs/build/node_modules/hogan.js/.git_ignore': []
-!!python/unicode 'media/bootstrap/docs/build/node_modules/hogan.js/.gitmodules': []
-!!python/unicode 'media/bootstrap/docs/build/node_modules/hogan.js/LICENSE': []
-!!python/unicode 'media/bootstrap/docs/build/node_modules/hogan.js/Makefile': []
-!!python/unicode 'media/bootstrap/docs/build/node_modules/hogan.js/package.json': []
-!!python/unicode 'media/bootstrap/docs/build/package.json': []
-!!python/unicode 'media/bootstrap/docs/components.html': []
-!!python/unicode 'media/bootstrap/docs/customize.html': []
-!!python/unicode 'media/bootstrap/docs/extend.html': []
-!!python/unicode 'media/bootstrap/docs/getting-started.html': []
-!!python/unicode 'media/bootstrap/docs/index.html': []
-!!python/unicode 'media/bootstrap/docs/javascript.html': []
-!!python/unicode 'media/bootstrap/docs/scaffolding.html': []
-!!python/unicode 'media/bootstrap/js/.jshintrc': []
-!!python/unicode 'media/bootstrap/js/bootstrap-affix.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-alert.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-button.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-carousel.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-collapse.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-dropdown.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-modal.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-popover.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-scrollspy.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-tab.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-tooltip.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-transition.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap-typeahead.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap.js': []
-!!python/unicode 'media/bootstrap/js/bootstrap.min.js': []
-!!python/unicode 'media/bootstrap/js/tests/index.html': []
-!!python/unicode 'media/bootstrap/js/tests/phantom.js': []
-!!python/unicode 'media/bootstrap/js/tests/server.js': []
-!!python/unicode 'media/bootstrap/js/tests/unit/bootstrap-affix.js': []
-!!python/unicode 'media/bootstrap/js/tests/unit/bootstrap-alert.js': []
-!!python/unicode 'media/bootstrap/js/tests/unit/bootstrap-button.js': []
-!!python/unicode 'media/bootstrap/less/accordion.less': []
-!!python/unicode 'media/bootstrap/less/alerts.less': []
-!!python/unicode 'media/bootstrap/less/bootstrap.less': []
-!!python/unicode 'media/bootstrap/less/breadcrumbs.less': []
-!!python/unicode 'media/bootstrap/less/button-groups.less': []
-!!python/unicode 'media/bootstrap/less/buttons.less': []
-!!python/unicode 'media/bootstrap/less/carousel.less': []
-!!python/unicode 'media/bootstrap/less/close.less': []
-!!python/unicode 'media/bootstrap/less/code.less': []
-!!python/unicode 'media/bootstrap/less/component-animations.less': []
-!!python/unicode 'media/bootstrap/less/dropdowns.less': []
-!!python/unicode 'media/bootstrap/less/forms.less': []
-!!python/unicode 'media/bootstrap/less/grid.less': []
-!!python/unicode 'media/bootstrap/less/hero-unit.less': []
-!!python/unicode 'media/bootstrap/less/labels-badges.less': []
-!!python/unicode 'media/bootstrap/less/layouts.less': []
-!!python/unicode 'media/bootstrap/less/media.less': []
-!!python/unicode 'media/bootstrap/less/mixins.less': []
-!!python/unicode 'media/bootstrap/less/modals.less': []
-!!python/unicode 'media/bootstrap/less/navbar.less': []
-!!python/unicode 'media/bootstrap/less/navs.less': []
-!!python/unicode 'media/bootstrap/less/pager.less': []
-!!python/unicode 'media/bootstrap/less/pagination.less': []
-!!python/unicode 'media/bootstrap/less/popovers.less': []
-!!python/unicode 'media/bootstrap/less/progress-bars.less': []
-!!python/unicode 'media/bootstrap/less/reset.less': []
-!!python/unicode 'media/bootstrap/less/responsive-1200px-min.less': []
-!!python/unicode 'media/bootstrap/less/responsive-767px-max.less': []
-!!python/unicode 'media/bootstrap/less/responsive-768px-979px.less': []
-!!python/unicode 'media/bootstrap/less/responsive-navbar.less': []
-!!python/unicode 'media/bootstrap/less/responsive-utilities.less': []
-!!python/unicode 'media/bootstrap/less/responsive.less': []
-!!python/unicode 'media/bootstrap/less/scaffolding.less': []
-!!python/unicode 'media/bootstrap/less/sprites.less': []
-!!python/unicode 'media/bootstrap/less/tables.less': []
-!!python/unicode 'media/bootstrap/less/tests/buttons.html': []
-!!python/unicode 'media/bootstrap/less/tests/css-tests.css': []
-!!python/unicode 'media/bootstrap/less/tests/css-tests.html': []
-!!python/unicode 'media/bootstrap/less/tests/forms-responsive.html': []
-!!python/unicode 'media/bootstrap/less/tests/forms.html': []
-!!python/unicode 'media/bootstrap/less/tests/navbar-fixed-top.html': []
-!!python/unicode 'media/bootstrap/less/tests/navbar-static-top.html': []
-!!python/unicode 'media/bootstrap/less/tests/navbar.html': []
-!!python/unicode 'media/bootstrap/less/thumbnails.less': []
-!!python/unicode 'media/bootstrap/less/tooltip.less': []
-!!python/unicode 'media/bootstrap/less/type.less': []
-!!python/unicode 'media/bootstrap/less/utilities.less': []
-!!python/unicode 'media/bootstrap/less/variables.less': []
-!!python/unicode 'media/bootstrap/less/wells.less': []
-!!python/unicode 'media/css/site.css': []
-!!python/unicode 'media/css/syntax.css': []
-!!python/unicode 'media/css/til.css': []
-!!python/unicode 'media/js/libs/dd_belatedpng.js': []
-!!python/unicode 'media/js/libs/jquery-1.5.1.min.js': []
-!!python/unicode 'media/js/libs/modernizr-1.7.min.js': []
-!!python/unicode 'portfolio/index.html': [base.j2, analytics.j2]
-!!python/unicode 'things.html': [macros.j2, base.j2, analytics.j2]
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id=".hyde_deps">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+                <div class="row">
+                  <div class="span5">
+                    <h3>ThingsILearned <small>By Dave Fowler</small></h3>                  </div>
+                  <div class="span3">
+                                                            <nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+                              <span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+                              <span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about">
+                About
+            </a>
+                                      </li>    </ul>
+</nav>
+                                        </ul>
+                  </div>
+                </div>
+              </div>          </header>
+          <section class="content">
+          <div class="row">
+     <div class="span8">
+         <article class="thing">
+         <div class='page-header'>
+               <h1></h1>
+         </div>
+         <p>{}</p>         </article>
+     </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

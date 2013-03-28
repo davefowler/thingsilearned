@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Appengine Example: Quick Thoughts</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="appengine-example-quick-thoughts">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+                <div class="row">
+                  <div class="span6">
+                    <h3>ThingsILearned <small>By Dave Fowler</small></h3>                  </div>
+                  <div class="span2">
+                                                            <nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about">
+                About
+            </a>
+						        </li>    </ul>
+</nav>
+                                        </ul>
+                  </div>
+                </div>
+              </div>          </header>
+          <section class="content">
+          <div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <div class='page-header'>
+		 	  <h1>Appengine Example: Quick Thoughts</h1>
+		 </div>
+		 <p>I've made a few apps on <a href="http://appengine.google.com/">Google's Appengine</a> now and am getting to the point where I can pump them out fairly quickly.  I really love that they make user authentication (my least favorite part of web applications) incredibly simplified.</p>
+<p>I wrote this app in less than an hour as a simple tool for myself and to test out the authentication tools which I hadn't gotten a chance to use yet.  I'm sharing the source here in case its of any use to others.</p>
+<h2>Description</h2>
+<p>The app is called <a href="http://quoughts.appspot.com/">Quick Thoughts</a> and its a very simple private micro blog (a private twitter).  Basically you log in and can record quick notes to yourself.  They're dated and only you can see them.</p>
+<p>Its all on one page.  You can get a good idea of what it is from this screen shot.  You can also just try it out yourself by logging into: <a href="http://quoughts.appspot.com/">http://quoughts.appspot.com/</a></p>
+<p><img alt="quickthoughts" src="http://thingsilearned.files.wordpress.com/2009/07/quickthoughts.gif?w=300" /></p>
+<p>There are a lot of <a href="http://www.google.com/search?q=appengine+tutorial&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a">other Appengine tutorials</a> including the <a href="http://code.google.com/appengine/docs/python/gettingstarted/">official tutorial</a> that do a very thorough job of explaining setting up a development environment and deploying.  I'm just going to share some more example code with some helpful comments.</p>
+<p>I know looking at code is not pretty, but I've included a lot of comments for each part.  It should be easiest to understand in that format.  Ugh: and I'm sorry that the crappy Wordpress syntax highlighting has totally f'd the format.  That pretty much makes python code useless, but hopefully you'll be able to sift through.</p>
+<h2>Template</h2>
+<p>There are only three files for this app.  The first is the HTML template for the single page that is used.</p>
+<p><strong>index.html</strong></p>
+<p>[sourcecode language='html']</p>
+<h2>Quick Thoughts</h2>
+<p>By &#123;&#123; user.nickname &#125;&#125;</p>
+<pre><code>[/sourcecode]
+
+This is all pretty straightforward especially if you come from the Django world.  Appengine wisely uses Django's templating system to render its HTML pages.  For more details on the templates view the &lt;a href="http://www.djangoproject.com/documentation/0.96/templates/"&gt;Django .96 Template Documentation&lt;/a&gt;.
+&lt;h2&gt;Request Handling&lt;/h2&gt;
+The second file is the python WSGI handler.  You can ofcourse use Django on Appengine and have the advantage of the nice url parser and the Django views format but here I just stuck with the WSGI RequestHandlers.
+
+&lt;strong&gt;thoughts.py&lt;/strong&gt;
+
+[sourcecode language='python']
+
+from google.appengine.api.urlfetch import fetch as urlfetch, GET, POST
+from google.appengine.ext import db
+from google.appengine.ext.webapp import RequestHandler, WSGIApplication
+from google.appengine.ext.webapp import template
+from google.appengine.api import users
+
+import os
+
+from wsgiref.handlers import CGIHandler
+
+class Thought(db.Model):
+ """
+ This is the Database Model that stores the different Thought objects that the user submits
+ Each entry in the database stores a thought, date and the user who wrote it.
+ """
+ thought = db.TextProperty()
+ date = db.DateTimeProperty(auto_now_add=True)
+ # The auto_now_add setting automatically adds the date that the object was created so you don't have to.
+ user = db.UserProperty()  # Google handles the user for you.  Great!
+
+class ThoughtHandler(RequestHandler):
+
+ def get(self):
+ user = users.get_current_user() # Get the user
+ if not user:
+ # If they are not logged in, ask google to authenticate them.
+ self.redirect(users.create_login_url(self.request.uri))
+
+ # These are the variables that will be sent to the template
+ template_values = {
+ # This is a GQL query for the appengine datastore.  
+ # Here we're finding all Thoughts for the given User and ordering them by Date descending
+ # More info on GQL: http://code.google.com/appengine/docs/python/datastore/gqlreference.html
+ 'thoughts':  Thought.all().filter("user =", user).order('-date'),  
+ 'user': user,
+ }
+
+ # Gather the full path to the template
+ path = os.path.join(os.path.dirname(__file__), 'index.html')
+
+ # Render the template with the template_values we collected above
+ html = template.render(path, template_values)
+
+ # Write out the result
+ self.response.out.write(html)
+
+ def post(self):
+ """
+ A Thought has been submitted via POST.
+ Create a new Thought object and re-direct back to the front page.
+ """
+ user = users.get_current_user() # Get the user
+ if not user:
+ # If they are not logged in, ask google to authenticate them.
+ self.redirect(users.create_login_url(self.request.uri))
+
+ # Get the 'thought' POST data from the request
+ thought = self.request.get('thought')
+
+ # Create a new thought object using the POST data and the authed user
+ t = Thought( thought = thought, user = user )
+ # Save the object
+ t.put()
+
+ # Now re-direct back to the front page
+ self.redirect('/')
+
+def main():
+ """
+ This simple function is the URL parser
+ There's only one URL for this app, so its a pretty bad example for this ;)
+ """
+ application = WSGIApplication([
+
+ ('/', ThoughtHandler),
+
+ ], debug=True)
+
+ CGIHandler().run(application)
+
+if __name__ == '__main__':
+ main()
+[/sourcecode]
+
+There are a few major highlights in this code: the Thought Datastore Model, the Query for your Thoughts, and the simple Google Authentication.  I LOVE these three lines of code (yes, I know how nerdy that sounds):
+
+[sourcecode language='python']
+user = users.get_current_user() # Get the user
+if not user:
+    self.redirect(users.create_login_url(self.request.uri))
+</code></pre>
+<p>[/sourcecode]</p>
+<p>In those 3 lines we've requested the User object and asked Google to authenticate them and send them back if they're not logged in!  Super simple!  No more login/signup/change password/change username crap to deal with here.  The authentication is done for you.</p>
+<p>Toward the top is the Thought model that is a subclass of db.Model.  For those of you who're familiar with Django this format will look familiar.  The Thought model contains the text of the thought, the date it was recorded and the user who recorded it.</p>
+<p>In the 'get' Request we query for all of the thoughts of the given user and order them by descending date.  The objects are fetched using GQL, the query interface for the Datastore.  You can handle most queries by playing with the format of the above example, but here is <a href="http://code.google.com/appengine/docs/python/datastore/gqlreference.html">more information on GQL</a>.</p>
+<h2>Configuration</h2>
+<p>Finally we need the configuration file for our app.  Its called app.yaml and it tells appengine what App we've registered as, and how to handle the URLs.</p>
+<p><strong>app.yaml</strong></p>
+<p>[sourcecode language='bash']</p>
+<p>application: YOURAPPNAME
+version: 1
+runtime: python
+api_version: 1</p>
+<p>handlers:</p>
+<ul>
+<li>url: /.*
+ script: thoughts.py</li>
+</ul>
+<p>[/sourcecode]</p>
+<p><a href="http://code.google.com/appengine/docs/python/gettingstarted/staticfiles.html">Other tutorials</a> explain this file well.  You can expand it to include other scripts and serve static files.</p>
+<h2>Conclusion</h2>
+<p>Now you have your own private micro-blog on Google's datastore!  That means it's theoretically infinitely scalable without you ever having to worry about a thing.  You can grow to the size of twitter and never blink an eye :).</p>
+<p>Hope it helped some people.  Feel free to use this code in any way you'd like and feel free to leave questions, comments or corrections.</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

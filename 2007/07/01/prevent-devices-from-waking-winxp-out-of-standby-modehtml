@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Prevent Devices from Waking WinXP out of Standby Mode</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="prevent-devices-from-waking-winxp-out-of-standby-mode">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <h1>ThingsILearned</h1>
+            <h3>Something new every day... or so.</h3>                              <nav class=main_nav>
+    <ul>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about.html">
+                About
+            </a>
+        </li>    </ul>
+</nav>
+                    </header>
+          <section class="content">
+          
+<div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <h1>Prevent Devices from Waking WinXP out of Standby Mode</h1>
+		 
+		 <p>I had the annoying problem of putting my computer on standby mode for the night, only to have it mysteriously come back on due to some device activity that I didn't know about!</p>
+<p>Here's how I investigated the issue and found a fix:</p>
+<ol>
+<li>I opened a command window with start &gt; run &gt; cmd</li>
+<li>I typed in powercfg /devicequery wake_armed</li>
+</ol>
+<p>This brought up a list of devices capable of waking my computer from standby.</p>
+<p>I found the culprit almost immediately: the network card. (NVIDIA Nforce Networking Controller)</p>
+<ol>
+<li>
+<p>I typed in powercfg /devicedisablewake "NVIDIA Nforce Networking Controller)"</p>
+</li>
+<li>
+<p>Problem solved.</p>
+</li>
+</ol>
+<p>Apparently, there's an alternate way of shutting off this "capability," using control panel &gt; system &gt; hardware &gt; device manager &gt; network adapters and then bringing up the properties &gt; power management option of the network controller. There's also a way to enable devices, with the command /deviceenablewake. (Typing in /? Will bring up a help file with the interface syntax that's needed.)</p>
+<p>Just for safety, I disablewaked all the other devices on the list except the keyboard and mouse. One would think there's a single place in the control panel to find all these wake_armed devices (and even better, if it was in the Power Options), but there isn't.</p>
+<p>--Vu</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

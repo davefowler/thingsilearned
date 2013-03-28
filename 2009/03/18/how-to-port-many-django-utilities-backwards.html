@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>How to Port Many Django Utilities Backwards</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="how-to-port-many-django-utilities-backwards">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+                <div class="row">
+                  <div class="span6">
+                    <h3>ThingsILearned <small>By Dave Fowler</small></h3>                  </div>
+                  <div class="span2">
+                                                            <nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+						<span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about">
+                About
+            </a>
+						        </li>    </ul>
+</nav>
+                                        </ul>
+                  </div>
+                </div>
+              </div>          </header>
+          <section class="content">
+          <div class="row">
+	 <div class="span8">
+	     <article class="thing">	
+		 <div class='page-header'>
+		 	  <h1>How to Port Many Django Utilities Backwards</h1>
+		 </div>
+		 <p><a href="http://socialbrowse.com">Socialbrowse</a> is currently running on <a href="http://djangoproject.com">Django</a> trunk revision 7859 which is sometime before Django released version 1.0 along with several backwards incompatibility changes.  We use several common Django utilities which often don't work at the moment with our version of Django.  We could port our whole app forward, which we'll of course eventually do but there are currently a few headaches in that that we're putting off.</p>
+<p>Usually its simple enough to look through the svn log and find out where the Django utils we're using made compatibility upgrades to fit with Django 1.0 and just revert to using that instance.  On occasion though we've needed the latest functionality of the utility.  For example most recently we wanted the latest version of <a href="http://code.google.com/p/django-compress/">django-compress</a> for its incorporation with <a href="http://developer.yahoo.com/yui/compressor/">YUI Compressor</a>.</p>
+<p>Loading the latest will give an error claiming its unable to import Signal.  From what I've seen this is the most common backwards incompatibility in Django modules and can be easily fixed.  Here are the indepth details on the <a href="http://code.djangoproject.com/wiki/BackwardsIncompatibleChanges#Signalrefactoring">Django Signals backwards incompatibility</a>.</p>
+<p>I've ported two different utilities back to pre-django using this method.  In the utility there is often a signals.py file.  Take a look at the file pre and post Django 1.0 support.  In django-compress the files look like this.</p>
+<p><em>signals.py revision 74:</em>
+css_filtered = object()
+js_filtered = object()</p>
+<p><em>signals.py revision 98 (HEAD):</em>
+from django.dispatch import Signal
+css_filtered = Signal()
+js_filtered = Signal()</p>
+<p>In my experience you can simply revert back to the old signals.py and the import error will go away.</p>
+<p>svn up -r <pre django1.0 revision> signals.py</p>
+<p>If you were using the signals for this utility, well they may very well be messed up.  You may also have other backwards incompatibility issues but so far this is the only one I've run into.  All other issues should be listed in the page on <a href="http://code.djangoproject.com/wiki/BackwardsIncompatibleChanges">Backwards Incompatibility Changes</a>.</p>		 </article>
+    </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

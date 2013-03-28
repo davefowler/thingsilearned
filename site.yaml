@@ -56,6 +56,7 @@ suffix:
 publisher:
         github:
             type: hyde.ext.publishers.dvcs.Git
+            path: .
             url: git@github.com:davefowler/thingsilearned.git
 
 sorter:
