@@ -78,22 +78,20 @@
 <a href="http://thingsilearned.files.wordpress.com/2011/06/screen-shot-2011-06-07-at-1-33-38-am2.png"><img alt="" src="http://thingsilearned.files.wordpress.com/2011/06/screen-shot-2011-06-07-at-1-33-38-am2.png" /></a></p>
 </li>
 <li>
-<p>Open the settings.py in your django app and configure your email with the given credentials.  It should look something like this.
-<code>EMAIL_USE_TLS = True
+<p>Open the settings.py in your django app and configure your email with the given credentials.  It should look something like this.</p>
+<p>EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_HOST_USER = 'postmaster@YOURHOST.mailgun.org'
 EMAIL_HOST_PASSWORD = 'SOMEPASSWORD'
-EMAIL_PORT = 587</code></p>
+EMAIL_PORT = 587</p>
 </li>
 <li>
-<p>Test it out!./manage.py shell
-`</p>
+<p>Test it out!./manage.py shell</p>
 <blockquote>
 <blockquote>
 <blockquote>
 <p>from django.core.mail import send_mail
-send_mail('MailGun works great!', 'It really really does.', 'tester@YOURHOST.com', ['YOUREMAIL@gmail.com'], fail_silently=False)
-`</p>
+send_mail('MailGun works great!', 'It really really does.', 'tester@YOURHOST.com', ['YOUREMAIL@gmail.com'], fail_silently=False)</p>
 </blockquote>
 </blockquote>
 </blockquote>

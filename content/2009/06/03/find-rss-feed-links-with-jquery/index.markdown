@@ -18,13 +18,19 @@ This took me a little while to figure out so I thought I'd share.  You can use a
 
 The following line will return a list of the RSS link elements.
 
-`
-var link_elements = $('link[type="application/rss+xml"]');
-`
+
+    
+    
+    var link_elements = $('link[type="application/rss+xml"]');
+    
+
+
 
 The following snippet will create an array of all the urls to the RSS feeds on the page.
 
-`
-var links = [];
-$('link[type="application/rss+xml"]').each(function() { links[links.length] = this.href; });
-`
+
+    
+    
+    var links = [];
+    $('link[type="application/rss+xml"]').each(function() { links[links.length] = this.href; });
+    

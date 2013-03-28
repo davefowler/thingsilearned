@@ -17,25 +17,33 @@ In my current project, Chart.io we're aspiring to be [google analytics for your 
 
 Its not feasible to put all of those extra parameters that each chart type requires into the model as different columns.  We would end up with an incredible mess in short order.  So I instead create a PickledObjectField called 'params' in the model.
 
-`
-class Chart(models.Model):
-    ...
-    params = PickledObjectField(default={'just': 'some', 'default': 'parameters'} )
-`
+
+    
+    
+    class Chart(models.Model):
+        ...
+        params = PickledObjectField(default={'just': 'some', 'default': 'parameters'} )
+    
+
+
 
 The params variable then takes most any dictionary of parameters and automatically converts it to string to be stored in the database.
 
 The following command for example will save a params value of something like "KGRwMQpWa2V......" to the database, but you can still use it just like any dict object.
 
-`
->>> chart = Chart(params = {"type": "scatter", "dot_size":, 4, "color_list": ["red", "green", "orange"], });
->>> chart.save()
->>> chart.parms
-{"type": "scatter", "dot_size":, 4, "color_list": ["red", "green", "orange"], }
-#You can also treat the field just like a dict
->>> chart.parms['awesome'] = 'for sure'
 
-`
+    
+    
+    >>> chart = Chart(params = {"type": "scatter", "dot_size":, 4, "color_list": ["red", "green", "orange"], });
+    >>> chart.save()
+    >>> chart.parms
+    {"type": "scatter", "dot_size":, 4, "color_list": ["red", "green", "orange"], }
+    #You can also treat the field just like a dict
+    >>> chart.parms['awesome'] = 'for sure'
+    
+    
+
+
 
 Its worth noting that there is a similar snippet to this that uses JSON object to string conversion instead of Pickle.  I find that when using Javascript so heavily its easier to use some other string conversion so as not to get confused and I've been really impressed with the way that this particular snippet works.
 

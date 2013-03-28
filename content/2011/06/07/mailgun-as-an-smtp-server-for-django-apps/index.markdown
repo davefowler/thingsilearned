@@ -32,20 +32,26 @@ The recently launched [MailGun](http://mailgun.net)offers a great solution.  Its
 
 	
   4. Open the settings.py in your django app and configure your email with the given credentials.  It should look something like this.
-`
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.mailgun.org'
-EMAIL_HOST_USER = 'postmaster@YOURHOST.mailgun.org'
-EMAIL_HOST_PASSWORD = 'SOMEPASSWORD'
-EMAIL_PORT = 587
-`
+
+    
+    
+    EMAIL_USE_TLS = True
+    EMAIL_HOST = 'smtp.mailgun.org'
+    EMAIL_HOST_USER = 'postmaster@YOURHOST.mailgun.org'
+    EMAIL_HOST_PASSWORD = 'SOMEPASSWORD'
+    EMAIL_PORT = 587
+    
+
 
 	
   5. Test it out!./manage.py shell
-`
->>> from django.core.mail import send_mail
->>> send_mail('MailGun works great!', 'It really really does.', 'tester@YOURHOST.com', ['YOUREMAIL@gmail.com'], fail_silently=False)
-`
+
+    
+    
+    >>> from django.core.mail import send_mail
+    >>> send_mail('MailGun works great!', 'It really really does.', 'tester@YOURHOST.com', ['YOUREMAIL@gmail.com'], fail_silently=False)
+    
+
 
 
 

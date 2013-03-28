@@ -67,47 +67,44 @@
 <p>First create a 'testsetup' app and edit its tests.py file</p>
 <pre><code>./manage.py startapp testsetup
 open testsetup/tests.py
+
+__test__ = {"initialize tests": """
+
+&gt;&gt;&gt; your init code here
+
+""" }
 </code></pre>
-<p>`</p>
-<p><strong>test</strong> = {"initialize tests": """</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>your init code here</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>""" }</p>
-<p>`</p>
 <p>In the test.py file you can load the database, prime the cache, or setup whatever else you need initialized.  Then add the 'testapp' as the first app to your settings.py</p>
-<p>`</p>
-<p>INSTALLED_APPS = (</p>
-<p>'testsetup',</p>
-<p>...</p>
-<p>)</p>
-<p>`</p>
+<pre><code>INSTALLED_APPS = (
+
+'testsetup',
+
+...
+
+)
+</code></pre>
 <p>Now whenever you run</p>
 <pre><code>./manage.py test
 </code></pre>
 <p>It will first run the tests for the 'testssetup' script and everything will be primed.  If that's the only kind of test you run then that's all you'll need.  You're done with this tutorial.</p>
 <p>But if you run app level tests (ie. ./manage.py test someapp anotherapp ) then the above solution is not enough.  To ensure the testsuite is run before these apps we'll make our own TEST_RUNNER.  Create a file called 'testrunner.py' with the following source.</p>
-<p>`</p>
-<p>def run_tests(test_labels, verbosity=1, interactive = True, extra_tests=[]):
+<pre><code>def run_tests(test_labels, verbosity=1, interactive = True, extra_tests=[]):
 print "Given these test_labels", test_labels
-print "With these extra_test", extra_tests</p>
-<p>from django.test.simple import run_tests as django_run_tests
-if test_labels:</p>
-<h1>Make sure 'testsetup' is run first</h1>
-<p>tl = ['testsetup']
+print "With these extra_test", extra_tests
+
+from django.test.simple import run_tests as django_run_tests
+if test_labels:
+# Make sure 'testsetup' is run first
+tl = ['testsetup']
 tl.extend(list(test_labels))
 test_labels = tuple(tl)
-print "Testing these apps:", test_labels</p>
-<p>django_run_tests(test_labels, verbosity, interactive, extra_tests)</p>
-<p>`</p>
+print "Testing these apps:", test_labels
+
+django_run_tests(test_labels, verbosity, interactive, extra_tests)
+</code></pre>
 <p>and then in your settings.py file set the TEST_RUNNER variable</p>
-<p>`</p>
-<p>TEST_RUNNER = 'testrunner.run_tests'</p>
-<p>`</p>
+<pre><code>TEST_RUNNER = 'testrunner.run_tests'
+</code></pre>
 <p>This script simply wraps the django test runner to ensure that the testsetup app is tested before any other apps are.  It basically makes the django test runner think that you're running ./manage.py test testsetup someapp when you actually run ./manage.py test someapp.</p>
 <h3>Proposal</h3>
 <p>A note to the community: I think it'd be great if the Django settings.py included a TEST_INIT variable which allowed you to point to a function that would be executed immediately before the first test was run.  The hook would make the setup process for doctests much easier.</p>         </article>

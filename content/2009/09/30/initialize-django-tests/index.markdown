@@ -25,31 +25,39 @@ First create a 'testsetup' app and edit its tests.py file
     open testsetup/tests.py
 
 
-`
 
-__test__ = {"initialize tests": """
+    
+    
+    
+    __test__ = {"initialize tests": """
+    
+    >>> your init code here
+    
+    """ }
+    
+    
 
->>> your init code here
 
-""" }
-
-`
 
 
 
 In the test.py file you can load the database, prime the cache, or setup whatever else you need initialized.  Then add the 'testapp' as the first app to your settings.py
 
-`
 
-INSTALLED_APPS = (
+    
+    
+    
+    INSTALLED_APPS = (
+    
+    'testsetup',
+    
+    ...
+    
+    )
+    
+    
 
-'testsetup',
 
-...
-
-)
-
-`
 
 Now whenever you run
 
@@ -61,31 +69,39 @@ It will first run the tests for the 'testssetup' script and everything will be p
 
 But if you run app level tests (ie. ./manage.py test someapp anotherapp ) then the above solution is not enough.  To ensure the testsuite is run before these apps we'll make our own TEST_RUNNER.  Create a file called 'testrunner.py' with the following source.
 
-`
 
-def run_tests(test_labels, verbosity=1, interactive = True, extra_tests=[]):
-print "Given these test_labels", test_labels
-print "With these extra_test", extra_tests
+    
+    
+    
+    def run_tests(test_labels, verbosity=1, interactive = True, extra_tests=[]):
+    print "Given these test_labels", test_labels
+    print "With these extra_test", extra_tests
+    
+    from django.test.simple import run_tests as django_run_tests
+    if test_labels:
+    # Make sure 'testsetup' is run first
+    tl = ['testsetup']
+    tl.extend(list(test_labels))
+    test_labels = tuple(tl)
+    print "Testing these apps:", test_labels
+    
+    django_run_tests(test_labels, verbosity, interactive, extra_tests)
+    
+    
 
-from django.test.simple import run_tests as django_run_tests
-if test_labels:
-# Make sure 'testsetup' is run first
-tl = ['testsetup']
-tl.extend(list(test_labels))
-test_labels = tuple(tl)
-print "Testing these apps:", test_labels
 
-django_run_tests(test_labels, verbosity, interactive, extra_tests)
-
-`
 
 and then in your settings.py file set the TEST_RUNNER variable
 
-`
 
-TEST_RUNNER = 'testrunner.run_tests'
+    
+    
+    
+    TEST_RUNNER = 'testrunner.run_tests'
+    
+    
 
-`
+
 
 This script simply wraps the django test runner to ensure that the testsetup app is tested before any other apps are.  It basically makes the django test runner think that you're running ./manage.py test testsetup someapp when you actually run ./manage.py test someapp.
 

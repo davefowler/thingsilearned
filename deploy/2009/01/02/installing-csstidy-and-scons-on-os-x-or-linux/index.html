@@ -64,20 +64,20 @@
          <p>I'm setting up <a href="http://code.google.com/p/django-compress/">django-compress</a>, and incredibly helpful django tool for compressing media files.  By default it requires the installation of <a href="http://csstidy.sourceforge.net/">CSSTidy</a> which was not as smooth of a task as most.  Here are my notes.</p>
 <p><strong>Installing Scons</strong></p>
 <p>To install CSSTidy you have to have <a href="http://www.scons.org/">Scons</a> in order to install it.  Scons is similar to Make but uses python and probably has a ton of other differences as well.  The following will install scons.</p>
-<p><code>wget http://prdownloads.sourceforge.net/scons/scons-1.2.0.tar.gz
+<pre><code>wget http://prdownloads.sourceforge.net/scons/scons-1.2.0.tar.gz
 tar -xzvf scons-1.2.0.tar.gz
 cd scons-1.2.0
-sudo python setup.py install --standard-lib</code></p>
+sudo python setup.py install --standard-lib
+</code></pre>
 <p>I took me a short while to discover the need to use the --standard-lib flag.  If you do not scons is not installed in the python path and you will get the following error when trying to install csstidy</p>
 <p><em>scons: *** No SConstruct file found.
 File "/usr/local/lib/scons-1.2.0/SCons/Script/Main.py", line 826, in _main</em></p>
 <p><strong>Install CSSTidy</strong></p>
-<p>`</p>
-<p>wget http://downloads.sourceforge.net/csstidy/csstidy-source-1.4.zip?modtime=1184828155&amp;big_mirror=0
+<pre><code>wget http://downloads.sourceforge.net/csstidy/csstidy-source-1.4.zip?modtime=1184828155&amp;big_mirror=0
 unzip csstidy-source-1.4.zip
 scons
-sudo cp release/csstidy/csstidy /usr/local/bin/</p>
-<p>`</p>
+sudo cp release/csstidy/csstidy /usr/local/bin/
+</code></pre>
 <p>Note that the last command assumes /usr/local/bin is in your $PATH.  Change it if you would like to place it in another place.</p>         </article>
      </div>
 </div>

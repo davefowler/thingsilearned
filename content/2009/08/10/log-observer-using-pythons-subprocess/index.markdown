@@ -20,24 +20,28 @@ To begin I wrote a simple script that prints out "Program has run for x seconds.
 
 sample.py
 
-`
-import sys, time
 
-class FlushFile(object):
-   """Write-only flushing wrapper for file-type objects."""
-   def __init__(self, f):
-       self.f = f
-   def write(self, x):
-       self.f.write(x)
-       self.f.flush()
+    
+    
+    import sys, time
+    
+    class FlushFile(object):
+       """Write-only flushing wrapper for file-type objects."""
+       def __init__(self, f):
+           self.f = f
+       def write(self, x):
+           self.f.write(x)
+           self.f.flush()
+    
+    # Replace stdout with an automatically flushing version
+    sys.stdout = FlushFile(sys.__stdout__)
+    
+    for i in xrange(100):
+       sys.stdout.write("Program has run for %d seconds.\n" % i)
+       time.sleep(1)
+    
 
-# Replace stdout with an automatically flushing version
-sys.stdout = FlushFile(sys.__stdout__)
 
-for i in xrange(100):
-   sys.stdout.write("Program has run for %d seconds.\n" % i)
-   time.sleep(1)
-`
 
 The main part of the program is the last 3 lines where we write "Program has run for %d seconds" 100 times and pause for a second between each.
 
@@ -63,26 +67,30 @@ Next I wrote the wrapper which executes the above sample.py script as a python s
 
 observer.py
 
-`
 
-import subprocess, os, signal
-cmnd = "python sample.py" #change this line to run your script
-p, line = True, 'start'
+    
+    
+    
+    import subprocess, os, signal
+    cmnd = "python sample.py" #change this line to run your script
+    p, line = True, 'start'
+    
+    while True:
+       p = subprocess.Popen(cmnd, shell=True, stdout=subprocess.PIPE)
+    
+       while line:
+           line = p.stdout.readline()
+           print "line is:", line
+           if line.count('4'):
+               print "restarting the process"
+               os.kill(p.pid, signal.SIGUSR1)
+               line = True
+               break
+    
+       del p
+    
 
-while True:
-   p = subprocess.Popen(cmnd, shell=True, stdout=subprocess.PIPE)
 
-   while line:
-       line = p.stdout.readline()
-       print "line is:", line
-       if line.count('4'):
-           print "restarting the process"
-           os.kill(p.pid, signal.SIGUSR1)
-           line = True
-           break
-
-   del p
-`
 
 The output is continually checked in the 'while line:' loop of line 8.  In this example its printed out for our convenience.  Like 11 checks for the character '4' somewhere in the output.  If it does exist it kills the process and the stdout reading loop.
 

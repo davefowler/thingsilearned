@@ -44,7 +44,7 @@ There are only three files for this app.  The first is the HTML template for the
 
 **index.html**
 
-`
+
 
 
 
@@ -101,16 +101,22 @@ By &#123;&#123; user.nickname &#125;&#125;
 
 
 
+
+
+
+This is all pretty straightforward especially if you come from the Django world.  Appengine wisely uses Django's templating system to render its HTML pages.  For more details on the templates view the [Django .96 Template Documentation](http://www.djangoproject.com/documentation/0.96/templates/).
+
+
+## Request Handling
+
+
+The second file is the python WSGI handler.  You can ofcourse use Django on Appengine and have the advantage of the nice url parser and the Django views format but here I just stuck with the WSGI RequestHandlers.
+
+**thoughts.py**
+
+
     
-    </code>
     
-    This is all pretty straightforward especially if you come from the Django world.  Appengine wisely uses Django's templating system to render its HTML pages.  For more details on the templates view the <a href="http://www.djangoproject.com/documentation/0.96/templates/">Django .96 Template Documentation</a>.
-    <h2>Request Handling</h2>
-    The second file is the python WSGI handler.  You can ofcourse use Django on Appengine and have the advantage of the nice url parser and the Django views format but here I just stuck with the WSGI RequestHandlers.
-    
-    <strong>thoughts.py</strong>
-    
-    <code>
     
     from google.appengine.api.urlfetch import fetch as urlfetch, GET, POST
     from google.appengine.ext import db
@@ -194,17 +200,23 @@ By &#123;&#123; user.nickname &#125;&#125;
     
     if __name__ == '__main__':
      main()
-    </code>
     
-    There are a few major highlights in this code: the Thought Datastore Model, the Query for your Thoughts, and the simple Google Authentication.  I LOVE these three lines of code (yes, I know how nerdy that sounds):
+
+
+
+There are a few major highlights in this code: the Thought Datastore Model, the Query for your Thoughts, and the simple Google Authentication.  I LOVE these three lines of code (yes, I know how nerdy that sounds):
+
+
     
-    <code>
+    
     user = users.get_current_user() # Get the user
     if not user:
         self.redirect(users.create_login_url(self.request.uri))
 
 
-`
+
+
+
 
 In those 3 lines we've requested the User object and asked Google to authenticate them and send them back if they're not logged in!  Super simple!  No more login/signup/change password/change username crap to deal with here.  The authentication is done for you.
 
@@ -220,19 +232,23 @@ Finally we need the configuration file for our app.  Its called app.yaml and it 
 
 **app.yaml**
 
-`
 
-application: YOURAPPNAME
-version: 1
-runtime: python
-api_version: 1
+    
+    
+    
+    application: YOURAPPNAME
+    version: 1
+    runtime: python
+    api_version: 1
+    
+    handlers:
+    
+    - url: /.*
+     script: thoughts.py
+    
+    
 
-handlers:
 
-- url: /.*
- script: thoughts.py
-
-`
 
 [Other tutorials](http://code.google.com/appengine/docs/python/gettingstarted/staticfiles.html) explain this file well.  You can expand it to include other scripts and serve static files.
 

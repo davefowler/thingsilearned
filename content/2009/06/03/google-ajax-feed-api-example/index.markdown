@@ -66,19 +66,39 @@ To use the Feeds API you need to [get a key](http://code.google.com/apis/ajaxfee
 
 Now we have everything we need.  Create an HTML file and paste in the following code.  Make sure to change YOUR_API_KEY, and the feed_title and feed_url variables to your values.
 
-`
 
-  
-
-  
+    
+    
+    <html>
+      <head>
+    
+    	<script>
+    	  var feed_title = "Dave's Socialbrowse Feed";
+    	  var feed_url = "http://socialbrowse.com/rss/uname/PUBLIC_NAME/";
+    	</script>
+    
+        <script src="http://www.google.com/jsapi?key=ABQIAAAAmcnSI-mFmfJW8bidL13qfRQHElLAWyCZ_TZ_pzrAvWp3ncTV5hRgCPRM76Ub8GIqowNBQZMVWYastg" type="text/javascript"></script>
+        <script type="text/javascript">
+    
+          google.load("feeds", "1");
+    
+          function initialize() {
+            var feedControl = new google.feeds.FeedControl();
+            feedControl.addFeed(feed_url, feed_title);
+            feedControl.draw(document.getElementById("feedControl"));
+          }
+          google.setOnLoadCallback(initialize);
+    
+        </script>
+      </head>
+    
+      <body>
+        <div id="feedControl">Loading</div>
+      </body>
+    </html>
     
 
-Loading
 
-
-  
-
-`
 
 Viewing the page in a browser will result in something that looks like this
 
@@ -88,8 +108,12 @@ Its not very pretty but its easy enough to style it however you like using CSS. 
 
 Finally, note that this code can be used with any feed, not just Socialbrowse.  If you want to display the latest [Google News](http://news.google.com) for example simply change the feed variables to
 
-`
-	  var feed_title = "Google News";
-	  var feed_url = "http://news.google.com/news?pz=1&ned;=us&hl;=en&topic;=h&num;=3&output;=rss";
-`
+
+    
+    
+    	  var feed_title = "Google News";
+    	  var feed_url = "http://news.google.com/news?pz=1&ned;=us&hl;=en&topic;=h&num;=3&output;=rss";
+    
+
+
 

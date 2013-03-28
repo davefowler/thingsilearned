@@ -64,23 +64,27 @@
          <p>The Django manager is a really handy tool.  I wrote earlier about making your own custom managers and there is a lot of other great documentation on it.</p>
 <p>Django comes with a bunch of helpful management commands like 'flush', 'syncdb', 'test', etc.</p>
 <p>I've created a generic 'drop' command as I felt it was missing.  I often found myself going into mysql to drop and re-create a database.  This is needed whenever you significantly change your models and need to start over.  The 'drop' command does that automatically using the database information in your settings file.</p>
-<p>The following code is from <a href="http://dpaste.com/hold/42832/">'drop.py'</a>
-`
-from django.conf import settingsfrom django.conf import settings</p>
-<p>from django.core.management.base import NoArgsCommand</p>
-<p>class Command(NoArgsCommand):
+<p>The following code is from <a href="http://dpaste.com/hold/42832/">'drop.py'</a></p>
+<pre><code>from django.conf import settingsfrom django.conf import settings
+
+from django.core.management.base import NoArgsCommand
+
+class Command(NoArgsCommand):
  help = "Drop and re-create the database"
- def handle_noargs(self, **options):</p>
-<p>import MySQLdb</p>
-<p>print "Connecting..."
+ def handle_noargs(self, **options):
+
+ import MySQLdb
+
+ print "Connecting..."
  db=MySQLdb.connect(host=settings.DATABASE_HOST or "localhost" ,user=settings.DATABASE_USER,
- passwd=settings.DATABASE_PASSWORD, port=int(settings.DATABASE_PORT or 3306))</p>
-<p>cursor = db.cursor()
+ passwd=settings.DATABASE_PASSWORD, port=int(settings.DATABASE_PORT or 3306))
+
+ cursor = db.cursor()
  print "Dropping database %s" % settings.DATABASE_NAME
  cursor.execute("drop database %s; create database %s;" % (settings.DATABASE_NAME, settings.DATABASE_NAME))
  print "Dropped"
-`
-To install simply place this code in a file called 'drop.py' and add it to a management comands folder.  If you don't have a management command folder yet you simply need to create the following file structure in one of your app directories (MY-APP-DIR).</p>
+</code></pre>
+<p>To install simply place this code in a file called 'drop.py' and add it to a management comands folder.  If you don't have a management command folder yet you simply need to create the following file structure in one of your app directories (MY-APP-DIR).</p>
 <pre><code>MY-APP-DIR/
   management/
     __init__.py

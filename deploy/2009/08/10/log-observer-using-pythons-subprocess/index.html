@@ -65,21 +65,23 @@
 <p>There isn't a lot of documentation examples on it so to figure it out I wrote this small test app and I thought I'd share it here.</p>
 <p>To begin I wrote a simple script that prints out "Program has run for x seconds." every x seconds to simulate a long running and noisy script that I might be observing.  Here is the code.</p>
 <p>sample.py</p>
-<p>`
-import sys, time</p>
-<p>class FlushFile(object):
+<pre><code>import sys, time
+
+class FlushFile(object):
    """Write-only flushing wrapper for file-type objects."""
-   def <strong>init</strong>(self, f):
+   def __init__(self, f):
        self.f = f
    def write(self, x):
        self.f.write(x)
-       self.f.flush()</p>
-<h1>Replace stdout with an automatically flushing version</h1>
-<p>sys.stdout = FlushFile(sys.<strong>stdout</strong>)</p>
-<p>for i in xrange(100):
+       self.f.flush()
+
+# Replace stdout with an automatically flushing version
+sys.stdout = FlushFile(sys.__stdout__)
+
+for i in xrange(100):
    sys.stdout.write("Program has run for %d seconds.\n" % i)
    time.sleep(1)
-`</p>
+</code></pre>
 <p>The main part of the program is the last 3 lines where we write "Program has run for %d seconds" 100 times and pause for a second between each.</p>
 <p>The FlushFile object is simply a <a href="http://stackoverflow.com/questions/527197/intercepting-stdout-of-a-subprocess-while-it-is-running">nice hack</a> to overwrite the default stdout object to ensure that the buffer is flushed every time it is written to.  Without the hack our log checker would simply be hung up until the task is fully completed instead of being able to read each line of the output as it is written.</p>
 <p>The output looks like this</p>
@@ -94,22 +96,24 @@ Program has run for 2 seconds.
 </blockquote>
 <p>Next I wrote the wrapper which executes the above sample.py script as a python subprocess and watches the output.  For this example I check whether a '4' exists in the output.  If it is I restart the script therefore creating a continual loop counting between 0 and 4 seconds.</p>
 <p>observer.py</p>
-<p>`</p>
-<p>import subprocess, os, signal
+<pre><code>import subprocess, os, signal
 cmnd = "python sample.py" #change this line to run your script
-p, line = True, 'start'</p>
-<p>while True:
-   p = subprocess.Popen(cmnd, shell=True, stdout=subprocess.PIPE)</p>
-<p>while line:
+p, line = True, 'start'
+
+while True:
+   p = subprocess.Popen(cmnd, shell=True, stdout=subprocess.PIPE)
+
+   while line:
        line = p.stdout.readline()
        print "line is:", line
        if line.count('4'):
            print "restarting the process"
            os.kill(p.pid, signal.SIGUSR1)
            line = True
-           break</p>
-<p>del p
-`</p>
+           break
+
+   del p
+</code></pre>
 <p>The output is continually checked in the 'while line:' loop of line 8.  In this example its printed out for our convenience.  Like 11 checks for the character '4' somewhere in the output.  If it does exist it kills the process and the stdout reading loop.</p>
 <p>That loop is wrapped in another however that simply restarts the process all over again.  The resulting output is</p>
 <blockquote></blockquote>

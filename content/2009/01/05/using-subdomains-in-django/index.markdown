@@ -13,25 +13,33 @@ Django's url dispatcher doesn't handle subdomains.  If you want/need to use subd
 
 There's some [easy documentation](http://docs.djangoproject.com/en/dev/topics/http/middleware/?from=olddocs) for extra information but for our needs all you need to do is make a Class with a function called process_request.  This function gets called on any request before it is processed by the url dispatcher.  It needs to return either nothing (None) or an HttpResponse object.  Here's the code used to get the subdomain.
 
-`
-class SubdomainMiddleware:
-    def process_request(self, request):
-        """Parse out the subdomain from the request"""
-        request.subdomain = None
-        host = request.META.get('HTTP_HOST', '')
-        host_s = host.replace('www.', '').split('.')
-        if len(host_s) > 2:
-            request.subdomain = ''.join(host_s[:-2])
-`
+
+    
+    
+    class SubdomainMiddleware:
+        def process_request(self, request):
+            """Parse out the subdomain from the request"""
+            request.subdomain = None
+            host = request.META.get('HTTP_HOST', '')
+            host_s = host.replace('www.', '').split('.')
+            if len(host_s) > 2:
+                request.subdomain = ''.join(host_s[:-2])
+    
+
+
 
 
 Now your request object has a 'subdomain' attribute you can use in your views.  Alternatively you could return an HttpResponse of any sort including redirects directly from the process_request function.  Make sure to add this class to your middlware classes:
 
 
-`
-MIDDLEWARE_CLASSES = (
-    'path.to.middlware.SubdomainMiddleware', )
-`
+
+    
+    
+    MIDDLEWARE_CLASSES = (
+        'path.to.middlware.SubdomainMiddleware', )
+    
+
+
 
 
 Using subdomains on localhost can be a pain.  To do so sudo edit your /etc/hosts file and add the following lines replacing test.com with whatever you want to call your test url and the subdomains with your site's subdomains.
@@ -66,6 +74,8 @@ This locally alters the DNS for test.com so you can use it as your localhost tes
 
 
 
-`
-SESSION_COOKIE_DOMAIN = '.mysite.com'
-`
+
+    
+    
+    SESSION_COOKIE_DOMAIN = '.mysite.com'
+    

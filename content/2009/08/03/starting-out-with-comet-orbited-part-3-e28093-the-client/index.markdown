@@ -23,16 +23,23 @@ For it to work you will have to have the configuration of [Part 2](http://things
 
 At the top of the <head> you first need to include the libraries for the Orbited (/static/Orbited.js) and STOMP (/static/protocols/stomp/stomp.js) client-side implementations.
 
-`
+
+    
+    
+    
+    <script>document.domain=document.domain</script>
+     <script src="http://localhost:9000/static/Orbited.js"></script>
+     <script>
+     Orbited.settings.port = 9000;
+     TCPSocket = Orbited.TCPSocket;
+     </script>
+     <script src="http://localhost:9000/static/protocols/stomp/stomp.js"></script>
+    
+     <script src="http://www.json.org/json2.js"></script>
+    
+    
 
 
- 
- 
- 
-
- 
-
-`
 
 In between the scripts we've set up a TCPScocket.  It must be don between the two script includes because the STOMP library needs the socket setup for its execution.  We've also specified the Orbited port which is necessary especially if you change the port on which the orbited and stomp javascript files are hosted on (they can both be hosted on port 80 along with your other scripts).
 
@@ -44,11 +51,34 @@ Lastly, we've also included a popular [JSON library](http://www.json.org/js.html
 
 Because we're dealing with the setup we'll skip to the bottom of the page and add the following script just before the end tag of the body (</body>).
 
-`
+
+    
+    
+    
+    <script type="text/javascript">
+    (function() { // set up stomp client.
+    
+    stomp = new STOMPClient();
+    
+     stomp.onconnectedframe = function() {  // Run on initial connection to STOMP (comet) server
+     stomp.ready = true;
+     // subscribe to channel CHANNEL = "/ezchat/"
+     var CHANNEL = '/ezchat/'
+     stomp.subscribe(CHANNEL);
+     };
+    
+     stomp.onmessageframe = function(frame) {  // Executed when a messge is received
+     my_receive( JSON.parse(frame.body) );
+     };
+    
+     // Everything is setup. Start the connection!
+    stomp.connect(document.domain, 61613); //, 'guest', 'guest');
+    })();
+    </script>
+    
+    
 
 
-
-`
 
 My apologies as always for the crappiness of the wordpress syntax parser.   Lets walk through what's happening.
 
@@ -123,24 +153,22 @@ So you see that the onmessageframe is simply parsing the json object in frame.bo
 
 For EZChat we need a form where users can specify a name and type messages to send.  We also need an area to put the messages.  Plop this HTML in at the top of the <body> to handle all of that.
 
-`
+
+    
+    
+    <h2>EZChat - Example Comet Client!</h2>
+    Everyone viewing this page will see the messsages you submit instantly.
+    <form action="#" id="message_form">
+     Name:
+     <input type="text" name="chat_name" id="chat_name"></input>
+     Message:
+     <textarea rows="4" cols="40" name="message" id="message"></textarea>
+     <input type="submit" name="Send" onclick="return my_send(); return false"></input>
+    </form>
+    <div id="messages"></div>
+    
 
 
-## EZChat - Example Comet Client!
-
-
-Everyone viewing this page will see the messsages you submit instantly.
-
- Name:
- 
- Message:
- 
- 
-
-
-
-
-`
 
 There are a few things to notice here.  First, the important elements in the form have ids 'chat_name' and 'message' and the area that will be containing all the received messages is called 'messages'.  The names don't matter except that we'll use them in the functions we create later.
 
@@ -158,22 +186,26 @@ Lastly we need to make the custom my_send and my_receive functions that get call
 
 The my_send function will get the values from the 'chat_name' and 'message' form elements, combine them in an object, convert the object to json, and then sends it to the '/ezchat/' channel.  The sending is handled using the stomp.send command which takes as input the object to send and second, the channel to send it to.
 
-`
-var CHANNEL = '/ezchat/';
-function my_send() {
 
-// Get the values to send from the form
- var name = document.getElementById('chat_name').value;
- var message = document.getElementById('message').value;
+    
+    
+    var CHANNEL = '/ezchat/';
+    function my_send() {
+    
+    // Get the values to send from the form
+     var name = document.getElementById('chat_name').value;
+     var message = document.getElementById('message').value;
+    
+     var msg = {'name': name, 'message': message};
+    
+     var json_msg = JSON.stringify(msg);
+     stomp.send(json_msg, CHANNEL)
+     return false;
+     }
+    
+    
 
- var msg = {'name': name, 'message': message};
 
- var json_msg = JSON.stringify(msg);
- stomp.send(json_msg, CHANNEL)
- return false;
- }
-
-`
 
 
 ### my_receive
@@ -188,21 +220,21 @@ msg = {'name': <some name>, 'message': <some message>}
 
 The my_receive function simply takes this object and converts it into a prettier HTML format and appends it to the top of the message list we created in the HTML.
 
-`
-function my_receive( msg ) {
- console.log('received message', msg);
- // append the  to the top of the list of messages.
- var messages_el = document.getElementById('messages');
- var new_message = "
+
+    
+    
+    function my_receive( msg ) {
+     console.log('received message', msg);
+     // append the <msg> to the top of the list of messages.
+     var messages_el = document.getElementById('messages');
+     var new_message = "
+    <div><strong>" + msg['name'] + ":</strong> " + msg['message'] + "</div>
+    ";
+     messages_el.innerHTML = new_message + messages_el.innerHTML;
+     }
+    
 
 
-**" + msg['name'] + ":** " + msg['message'] + "
-
-
-";
- messages_el.innerHTML = new_message + messages_el.innerHTML;
- }
-`
 
 That's it for the code.  Scroll to the bottom of the page for the full version of the source.
 
@@ -224,40 +256,91 @@ That's it for this part of the Tutorial!  There are still parts to come includin
 
 For your convenience here's the full index.html file for this example.
 
-`
 
- 
+    
+    
+    
+     <html>
+    
+    <head>
+     <script>document.domain=document.domain</script>
+     <script src="http://localhost:9000/static/Orbited.js"></script>
+     <script>
+     Orbited.settings.port = 9000;
+     TCPSocket = Orbited.TCPSocket;
+     </script>
+     <script src="http://localhost:9000/static/protocols/stomp/stomp.js"></script>
+    
+     <script src="http://www.json.org/json2.js"></script>
+    
+     <script type="text/javascript">
+     // These are our custom functions for sending and receiving STOMP messages.
+     // They will be sent in the format msg = {'name': somename, 'message': somemessage}
+    
+     var CHANNEL = '/ezchat/';
+    
+     function my_receive( msg ) {
+     console.log('received message', msg);
+     // append the <msg> to the top of the list of messages.
+     var messages_el = document.getElementById('messages');
+     var new_message = "
+    <div><strong>" + msg['name'] + ":</strong> " + msg['message'] + "</div>
+    ";
+     messages_el.innerHTML = new_message + messages_el.innerHTML;
+     }
+     function my_send() {
+     // Get the values to send from the form      
+    
+     var name = document.getElementById('chat_name').value;
+     var message = document.getElementById('message').value;
+    
+     var msg = {'name': name, 'message': message};
+     console.log(msg);
+    
+     var json_msg = JSON.stringify(msg);
+     console.log(json_msg);
+     stomp.send(json_msg, CHANNEL)
+     return false;
+     }       
+     </script>
+    
+    </head>
+    
+    <body>
+    <h2>EZChat - Example Comet Client!</h2>
+    <div>Everyone viewing this page will see the messsages you submit instantly.</div>
+    <form action="#" id="message_form">
+     Name:
+     <input type="text" name="chat_name" id="chat_name"></input>
+     Message:
+     <textarea rows="4" cols="40" name="message" id="message"></textarea>
+     <input type="submit" name="Send" onclick="return my_send(); return false"></input>
+    </form>
+    <div id="messages"></div>
+    <script type="text/javascript">
+    (function() { // set up stomp client.
+     stomp = new STOMPClient();
+     stomp.onconnectedframe = function() {  // Run on initial connection to STOMP (comet) server
+     stomp.ready = true;
+     // subscribe to channel CHANNEL = "/ezchat/"
+     stomp.subscribe(CHANNEL);          
+     };
+    
+     stomp.onmessageframe = function(frame) {  // Executed when a messge is received
+     console.log('frame is', frame);
+     my_receive( JSON.parse(frame.body) );
+     };
+    
+     // Everything is setup. Start the connection!
+     stomp.connect(document.domain, 61613); //, 'guest', 'guest');
+    })();
+    </script>
+    
+    </body>
+    
+    </html>
+    
+    
 
 
-
-
-
-
-
-
-## EZChat - Example Comet Client!
-
-
-
-
-Everyone viewing this page will see the messsages you submit instantly.
-
-
-
- Name:
- 
- Message:
- 
- 
-
-
-
-
-
-
-
-
-
-
-`
 As usual, if there are corrections or questions please be sure to leave them in the comments.  And remember to [subscribe](http://thingsilearned.com/feed/) to catch the rest of the series.
