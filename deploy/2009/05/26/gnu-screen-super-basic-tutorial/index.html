@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>GNU Screen Basic Tutorial</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="index">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+                <div class="row">
+                  <div class="span5">
+                    <h3>ThingsILearned <small>By Dave Fowler</small></h3>                  </div>
+                  <div class="span3">
+                                                            <nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+                              <span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+                              <span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about">
+                About
+            </a>
+                                      </li>    </ul>
+</nav>
+                                        </ul>
+                  </div>
+                </div>
+              </div>          </header>
+          <section class="content">
+          <div class="row">
+     <div class="span8">
+         <article class="thing">
+         <div class='page-header'>
+               <h1>GNU Screen Basic Tutorial</h1>
+         </div>
+         <p>If you've ever SSHed into a server, ran something, logged off and got frustrated because whatever you were running stopped running because you had to change coffee shops or go to class then you've experienced the need for <a href="http://www.kuro5hin.org/story/2004/3/9/16838/14935">GNU Screen</a>.</p>
+<p>Put simply it allows you to maintain a persistent session, a terminal that does not change or quit just because you logged out.  Installation is easy.  On a debian machine its simply</p>
+<pre><code>sudo apt-get install screen
+</code></pre>
+<p>Usage is straight forward as well.  Type the word "screen"</p>
+<pre><code>$ screen
+</code></pre>
+<p>and you'll be shown a welcome window, press space to get through.  Now you'll simply see a standard shell.  You can execute whatever you want here and the session will not die until you tell it to.  You can start many different sessions and toggle between them.  Here's a table of the basic controls for screen.</p>
+<ul>
+<li>
+<p><em>Ctl-a Ctl-c</em>,  create a new window</p>
+</li>
+<li>
+<p><em>Ctl-a Ctl-a</em>,  switch between windows</p>
+</li>
+<li>
+<p><em>Ctl-a n</em>, toggle to next window</p>
+</li>
+<li>
+<p><em>Ctl-a p</em>, toggle to previous window</p>
+</li>
+<li>
+<p><em>Ctl-a 5</em>, toggle to 5th window</p>
+</li>
+<li>
+<p><em>Ctl-a "</em>, get a menu listing all of the window</p>
+</li>
+<li>
+<p><em>Ctl-a A</em>, tool for adding a name to your window, helpful for the menu view</p>
+</li>
+<li>
+<p><em>Ctl-a k</em>, Kills the window</p>
+</li>
+<li>
+<p><em>Ctl-a d</em>, Detach from the session</p>
+</li>
+</ul>
+<p>Another thing to note.  Once you detach from a screen, you need to re-attache the next time you run screen.  To do that simply specify the -r parameter.</p>
+<pre><code>$ screen -r
+</code></pre>
+<p><em><strong>Update 6-3-2009:</strong></em> A few fixes were made thanks to Ben Finney's comments</p>         </article>
+     </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

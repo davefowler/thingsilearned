@@ -2,13 +2,13 @@
 
 {% block main %}
 <div class="row">
-	 <div class="span8">
-	     <article class="thing">	
-		 <div class='page-header'>
-		 	  <h1>{{ resource.meta.title }}</h1>
-		 </div>
-		 {% filter markdown %}{% block thing_content %}{% endblock %}{% endfilter %}
-		 </article>
-    </div>
+     <div class="span8">
+         <article class="thing">
+         <div class='page-header'>
+               <h1>{{ resource.meta.title }}</h1>
+         </div>
+         {% filter markdown %}{% block thing_content %}{% endblock %}{% endfilter %}
+         </article>
+     </div>
 </div>
 {% endblock %}

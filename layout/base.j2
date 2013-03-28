@@ -34,20 +34,20 @@
       <div id="main" role="main">
           <header class="banner clearfix">
           {% block header -%}
-			  <div class='header'>
-				<div class="row">
-				  <div class="span6">
-					{% block pageheader %}<h3>ThingsILearned <small>By Dave Fowler</small></h3>{% endblock %}
-				  </div>
-				  <div class="span2">
-					{% block nav %}
-					{% from "macros.j2" import render_nav with context %}
-					{{ render_nav(menu) }}
-					{% endblock %}
-					</ul>
-				  </div>
-				</div>
-			  </div>
+              <div class='header'>
+                <div class="row">
+                  <div class="span5">
+                    {% block pageheader %}<h3>ThingsILearned <small>By Dave Fowler</small></h3>{% endblock %}
+                  </div>
+                  <div class="span3">
+                    {% block nav %}
+                    {% from "macros.j2" import render_nav with context %}
+                    {{ render_nav(menu) }}
+                    {% endblock %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
           {%- endblock %}
           </header>
           <section class="content">

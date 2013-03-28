@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Setup Safari Web Inspector</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="index">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+                <div class="row">
+                  <div class="span5">
+                    <h3>ThingsILearned <small>By Dave Fowler</small></h3>                  </div>
+                  <div class="span3">
+                                                            <nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+                              <span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+                              <span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about">
+                About
+            </a>
+                                      </li>    </ul>
+</nav>
+                                        </ul>
+                  </div>
+                </div>
+              </div>          </header>
+          <section class="content">
+          <div class="row">
+     <div class="span8">
+         <article class="thing">
+         <div class='page-header'>
+               <h1>Setup Safari Web Inspector</h1>
+         </div>
+         <p>A few months ago my friends at <a href="http://280North.com">280 North</a> told me about <a href="http://trac.webkit.org/wiki/Web%20Inspector">Safari's Web Inspector</a>.  Its quite simply Safari's version of Firebug.  Until recently I never had much of a reason to test it out but tonight I did.  To enable it simply run the following command in your Terminal.</p>
+<pre><code>&lt;span style="text-decoration:line-through;"&gt;defaults write com.apple.Safari WebKitDeveloperExtras \
+ -bool true&lt;/span&gt;
+</code></pre>
+<p><strong>Update:</strong> A better way to enable it is in the advanced tab in your preferences.  Thanks Rik</p>
+<p>More instructions for the rare windows users are <a href="http://trac.webkit.org/wiki/Web%20Inspector">here</a>.</p>
+<p>After that brief setup you can right click on page elements and choose "Inspect Element". It'll open up the Inspector window which has many of the same features as firebug including the option to dynamically edit css files and the following view showing load speeds for your pages.</p>
+<p><img alt="webinspecter1" src="http://thingsilearned.files.wordpress.com/2009/02/webinspecter1.png" /></p>
+<p>I'm looking forward to playing with this more.</p>         </article>
+     </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>

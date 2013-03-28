@@ -3,11 +3,10 @@
 <h3>
     <a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a>
     <a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
-	<br>
+     <br>
     <small class="subtext">
-	d:        {{ res.meta.date.strftime('%a, %d %b %Y') }}
-        <time datetime="{{ res.meta.date.strftime('%Y-%m-%d') }}">
-    	    {{ res.meta.date.strftime('%a, %d %b %Y') }}
+        <time datetime="{{ res.meta.date }}">
+             {{ res.meta.date }}
         </time>
     {% for category in res.meta.categories %}
         <a href="{{ category }}">{{ category }}</a>{% if not loop.last %},{% endif %}
@@ -38,10 +37,10 @@
                 href="{{ content_url(item.url) }}">
                 {{ item.name }}
             </a>
-			{% else %}
-			    {{ item.name }}
-			{% endif %}
-			{% if not loop.last %}<span class="divider">/</span>{% endif %}
+               {% else %}
+                   {{ item.name }}
+               {% endif %}
+               {% if not loop.last %}<span class="divider">/</span>{% endif %}
         </li>
         {%- endfor %}
     </ul>

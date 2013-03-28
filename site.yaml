@@ -25,7 +25,7 @@ context:
             -
                 name: About
                 description: About
-                url: /about.html
+                url: /about/
 
 meta:
     nodemeta: meta.yaml
@@ -58,7 +58,5 @@ suffix:
 sorter:
     date:
         attr:
-            - meta.slug # Note: change to meta.date once its working
+            - meta.date # Note: change to meta.date once its working
         reverse: true
-        filters:
-            meta.status: publish

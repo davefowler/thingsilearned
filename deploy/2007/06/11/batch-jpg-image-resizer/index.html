@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="">
+  <meta http-equiv="X-UA-Compatible" content="">
+
+  <title>Batch .jpg Image Resizer</title>
+  <meta name="description" content="">
+  <meta name="author" content="Dave Fowler">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <link rel="stylesheet" href="/media/css/til.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
+  
+    
+  </head>
+<body id="index">
+    <div class="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <div class='header'>
+                <div class="row">
+                  <div class="span5">
+                    <h3>ThingsILearned <small>By Dave Fowler</small></h3>                  </div>
+                  <div class="span3">
+                                                            <nav >
+    <ul class='breadcrumb'>
+                <li>
+            <a title="Home Page"
+                class="button white"
+                href="/index.html">
+                Home
+            </a>
+                              <span class="divider">/</span>        </li>        <li>
+            <a title="Things I Learned"
+                class="button white"
+                href="/things.html">
+                Things
+            </a>
+                              <span class="divider">/</span>        </li>        <li>
+            <a title="About"
+                class="button white"
+                href="/about">
+                About
+            </a>
+                                      </li>    </ul>
+</nav>
+                                        </ul>
+                  </div>
+                </div>
+              </div>          </header>
+          <section class="content">
+          <div class="row">
+     <div class="span8">
+         <article class="thing">
+         <div class='page-header'>
+               <h1>Batch .jpg Image Resizer</h1>
+         </div>
+         <p>Last night I was looking all over for a batch image resizer.  I needed to make a folder full of images smaller and didn't want to open <a href="http://gimp.org/">Gimp</a> for each one.  I downloaded 2 that weren't what I wanted and just as I was about to get really frustrated I realized, hey, I've taken two semesters of image processing.  I'd been wanting to play around with the <a href="http://www.pythonware.com/products/pil/">Python Image Library (PIL)</a> for a while and took this as my example problem.  It turned out to be real easy given their <a href="http://www.pythonware.com/library/pil/handbook/image.htm">thumbnail example</a>.</p>
+<p>I modified it to instead input a max width and max height that you wanted the batch of images to be converted to.  It then goes through and shrinks them to within the dimensions.   Here's a copy of their <a href="http://www.box.net/shared/p0hipv3l72">thumnails example</a> and my <a href="http://www.box.net/shared/m8qcxs7mj1">resize source</a>:</p>
+<pre><code>#! /usr/bin/env python
+
+#A Batch Image Resizer
+#By Dave Fowler 2007: davefowler@gmail.com
+
+"""Image Resizer"""
+
+from PIL import Image
+import glob, os, sys
+
+resize_folder = 'resized'
+
+maxW = float(sys.argv[1])
+maxH = float(sys.argv[2])
+
+for infile in glob.glob("*.jpg"):
+    file, ext = os.path.splitext(infile)
+    if not os.path.exists( os.path.abspath(resize_folder) ):
+    os.makedirs( os.path.abspath(resize_folder) )
+    im = Image.open(infile)
+    size = im.size
+    if maxW/size[0] &lt; maxH/size[1]:
+    newsize = (int(maxW), int(maxW/size[0]*size[1]))
+    else:
+    newsize = (int(maxH/size[1]*size[0]), int(maxH))
+    im = im.resize(newsize, Image.ANTIALIAS)
+    im.save(resize_folder + '/' + infile, "JPEG")
+</code></pre>
+<p>To run it you'll need <a href="http://python.org">python</a> and <a href="http://www.pythonware.com/products/pil/">PIL</a>.  Sorry, I haven't made an executable version yet.  Place the python file into the directory you want to resize or somewhere in your PATH and in the image folder use</p>
+<p><code>$ python resize.py &lt;max Width&gt; &lt;max Height&gt;</code></p>
+<p>A new directory will be made inside the folder called resized and will contain the resized versions of your image.  It currently only works for images ending in '.jpg'. Let me know if you make it fancier.</p>
+<p>Dave</p>         </article>
+     </div>
+</div>
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+    
+    <script type="text/javascript" src="/media/bootstrap/js/bootstrap.js"></script>
+  
+        </body>
+</html>
