@@ -53,7 +53,10 @@ suffix:
             - md
         output_extension: html
 
-
+publisher:
+        github:
+            type: hyde.ext.publishers.dvcs.Git
+            url: git@github.com:davefowler/thingsilearned.git
 
 sorter:
     date:
