@@ -17,9 +17,11 @@
   {% endblock favicons %}
 
   {% block css %}
-  <link rel="stylesheet" href="{{ media_url('css/til.css') }}">
   <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap.css') }}">
   <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap-responsive.css') }}">
+  <style>
+    .header h3 { color: #ccc; }
+  </style>
   {% endblock css %}
 
   {% block headjs %}
