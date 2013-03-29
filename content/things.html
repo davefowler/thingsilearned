@@ -8,6 +8,6 @@ description: Here's a list of some things I've learned.
 <section class="blog_excerpt">
 
 {% for thing in site.content.walk_resources_sorted_by_date() %}
-  {{ render_excerpt(thing, 'post') }}
+   {% if thing.meta.title %}{{ render_excerpt(thing, 'post') }}{% endif %}
 {% endfor %}
 </section>

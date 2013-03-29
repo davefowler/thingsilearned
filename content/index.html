@@ -7,21 +7,33 @@ description: Something new every day... or so.
 {% block main %}
 <style>
 body .hero-unit {
-   margin-top: 100px;
-}}
+    margin-top: 50px;
+    height: 240px;
+}
 body .page-header {
-   border-bottom: 0px;
+    margin-top: -20px;
+}
+
+body .page-header h1 {
+    color: #fff;
+    margin-top: 0px;
+}
+
+h1 small {
+    display: block;
+    color: #fafaff;
+    margin-left: 176px;
+    margin-top: -5px;
 }
 </style>
-
+<a href="{{ content_url('things.html') }}">
   <div class='hero-unit'>
-     <div class='page-header'>
-       <h1><a href="{{ content_url('things.html') }}">ThingsILearned</a>      <small>By Dave Fowler</small></h1>
+     <div class='row page-header'>
+       <div class="span4 offset2"><h1>ThingsILearned <small>By Dave Fowler</small></h1></div>
      </div>
-
-  <p>This is a place where I write out the things I've learned so that I can share them with others, remember them, and deepen my understanding.</p>
-
+     <!-- <p>This is a place where I write out the things I've learned so that I can share them with others, remember them, and deepen my understanding.</p> -->
 </div>
+</a>
 {% endblock %}
 
 {% block pageheader %}&nbsp;{% endblock %}
