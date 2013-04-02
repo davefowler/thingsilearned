@@ -205,7 +205,7 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-family: Raleway, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.8em;
   color: #333333;
@@ -618,7 +618,7 @@ h5,
 h6 {
   margin: 0.9em 0;
   font-family: inherit;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 1em;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -891,7 +891,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-family: Raleway, Helvetica, sans-serif;
 }
 label {
   display: block;
@@ -3821,7 +3821,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Raleway, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -4197,6 +4197,8 @@ input[type="submit"].btn.btn-mini {
 .breadcrumb {
   padding: 8px 15px;
   margin: 0 0 1.8em;
+  margin-top: 22px;
+  margin-bottom: 0px;
   list-style: none;
   background-color: #ffffff;
   -webkit-border-radius: 4px;
