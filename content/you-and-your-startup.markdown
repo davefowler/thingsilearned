@@ -24,9 +24,5 @@ on drive:
 
 
 
-
-
-
-
 [text]: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html "You and Your Research"
 
