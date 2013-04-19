@@ -5,9 +5,9 @@ comments: true
 ---
 Yesterday I discovered that many of the old posts on the [Chartio Blog][] used odd unicode versions of quotes that were being rendered terribly.  So I needed to do a find-replace for an entire directory.
 
-After over an hour of reading [man pages][] and online examples I discovered that I really hate the SED command.  I asked around about other's experiences and it everyone that I talked to who had tried it has their own horror stories to go along with it.
+The tool for doing so is the *sed* command line utility, and not using it has a [history of getting you ridiculed.][harthur]  After over an hour of reading [man pages][] and online examples I discovered that I really hate sed.  I asked around about other's experiences and it everyone that I talked to who had tried it has their own horror stories to go along with it.
 
-Maybe it just needs some better documentation, and if so I wish I could provide it, but I ended up writing/[modifying][] a simple python script to do string replacing on a directory level.
+Its probably a great tool, and I'm probably just too dumb to make it work for me and my odd unicode quote replacement job, but I ended up just writing/[modifying][] a simple python script to do string replacing on a directory level.  Its not a command line tool, or replacement for SED.  Just a script that I found useful and am sharing for others that may as well.
 
 <script src="https://gist.github.com/davefowler/5422045.js"></script>
 
@@ -26,3 +26,4 @@ The following example will replace all instances of the word *"old"* with *"new"
 [man pages]: http://unixhelp.ed.ac.uk/CGI/man-cgi?sed "SED man pages"
 [modifying]: http://stackoverflow.com/questions/4205854/python-way-to-recursively-find-and-replace-string-in-text-files "Replace String in Driectory Script"
 [Chartio Blog]: http://chartio.com/blog/
+[harthur]: http://harthur.wordpress.com/2013/01/24/771/
