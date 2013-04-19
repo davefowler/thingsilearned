@@ -2,7 +2,7 @@
 {% refer to res.relative_path as post %}
 <h3>
     <a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a>
-    <a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
+    <a href="{{ content_url(res.url) }}">{{ post.image|markdown }}</a>
      <br>
     <small class="subtext">
         <time datetime="{{ res.meta.date }}">

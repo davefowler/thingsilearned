@@ -22,7 +22,7 @@ context:
             -
                 name: Things
                 description: Things I Learned
-                url: /things.html
+                url: /things/index.html
             -
                 name: About
                 description: About
