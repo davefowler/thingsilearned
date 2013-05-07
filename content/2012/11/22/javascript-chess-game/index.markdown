@@ -4,6 +4,7 @@ date: '2012-11-22'
 slug: javascript-chess-game
 title: Chess in Javascript
 wordpress_id: 777
+category: code
 ---
 
 The Chartio team has grown now and several months ago I had to stop coding completely and focus on CEO tasks. I've missed programming a lot, and tonight, the night before Thanksgiving and one of the first breaks I've gotten, I created a little javascript chess game and AI.
@@ -20,13 +21,13 @@ Lastly, it wasn't fun at all to play myself so I made my first attempt in many y
 
 
 
-	
+
     * game status and potential moves are stored as strings
 
-	
+
     * I have no openers stored in memory
 
-	
+
     * the board score is only based on the pieces that remain
 
 

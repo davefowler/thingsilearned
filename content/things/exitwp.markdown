@@ -2,6 +2,7 @@
 date: '2013-03-30'
 title: 'exitwp: Wordpress Export Script for Hyde'
 comments: true
+category: code
 ---
 
 There's a nice [wordpress export script for Jeckyll][origexport] on github.  I [forked it][source] and made it work for [Hyde][] which is quite a similar format.  I made a few other changes based on these requirements I had
