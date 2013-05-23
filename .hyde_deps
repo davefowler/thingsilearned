@@ -522,6 +522,8 @@
 !!python/unicode 'things.html': [macros.j2, base.j2]
 !!python/unicode 'things/10-reasons-to-not-build-your-own-dashboard.markdown': [macros.j2,
   base.j2, thing.j2]
+!!python/unicode 'things/cherry-picking-with-mercurial.markdown': [macros.j2, base.j2,
+  thing.j2]
 !!python/unicode 'things/directory-replace.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/exitwp.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/index.html': [macros.j2, base.j2]
