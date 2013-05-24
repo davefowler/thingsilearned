@@ -1,3 +1,5 @@
+
+// this is for Megan's almostathirdgrader site
     
 var youtubelink = jQuery('object param[name="movie"]').val();
 var youtubecode = youtubelink.match(/\/v\/(.*)\?/)[1];
