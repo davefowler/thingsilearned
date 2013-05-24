@@ -1,6 +1,5 @@
+/* this is for Megan's almostathirdgrader site */
 
-// this is for Megan's almostathirdgrader site
-    
 var youtubelink = jQuery('object param[name="movie"]').val();
 var youtubecode = youtubelink.match(/\/v\/(.*)\?/)[1];
 var thumbnail = 'http://img.youtube.com/vi/' + youtubecode + '/0.jpg';
