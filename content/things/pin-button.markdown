@@ -2,6 +2,7 @@
 date: '2013-05-29'
 title: Javascript Controlled Pin Button for Images and Videos
 comments: true
+category: code
 ---
 My sister is making a great new site called [Almost A Third Grader][AlmostAThirdGrader] where during the summer she posts 3 videos a week for students between 2nd and 3rd grade to keep their skills fresh.
 
