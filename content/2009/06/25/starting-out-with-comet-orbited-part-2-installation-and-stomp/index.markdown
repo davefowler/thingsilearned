@@ -27,7 +27,7 @@ We will need to install the latest version of Orbited and also some Stomp tools.
 
 Installation simply consists of the following commands.
 
-    
+
     easy_install twisted
     easy_install orbited
     easy_install stompservice
@@ -50,14 +50,14 @@ If you have any troubles there is more info on the [Orbited Installation Guide](
 
 Orbited is configured with a '.cfg' file. Lets call ours example.cfg.  Make a directory anywhere for your project and paste the following into example.cfg
 
-    
+
     [global]
     session.ping_interval = 300
-    
+
     [listen]
     http://:9000
     stomp://:61613
-    
+
     [access]
     * -> localhost:61613
 
@@ -129,4 +129,4 @@ We've now setup and tested a Comet implementation.  You can see its benefits and
 
 In the mean time you may want to look at the [other demo's](http://localhost:9000/static/demos/) that came with Orbited or [Michael's Demo](http://cometdaily.com/2008/10/10/scalable-real-time-web-architecture-part-2-a-live-graph-with-orbited-morbidq-and-jsio/).
 
-**Update:** [Part 3 - The Client](http://thingsilearned.com/2009/08/03/starting-out-with-comet-orbited-part-3-%e2%80%93-the-client/) is now available.
+**Update:** [Part 3 - The Client](http://thingsilearned.com/2009/08/03/starting-out-with-comet-orbited-part-3-e28093-the-client/) is now available.

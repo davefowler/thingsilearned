@@ -96,7 +96,7 @@ That's why its important in Comet to separate connections from events, or why we
 
 That's it for my explanations/intro post.  I'm fairly new to the Comet scene myself and am very busy with my startup.  I'm sure there are a lot of additions or corrections, please leave them in the comments and I will try to keep up with corrections..
 
-I'll put more time in this depending on how much interest there is in the comments and [subscribriptions](http://thingsilearned.com/feed/).  Make sure to check the [Comet Category](http://thingsilearned.com/category/comet/) listings for the other posts.
+I'll put more time in this depending on how much interest there is in the comments and [subscribriptions](http://thingsilearned.com/feed/).
 
 The next post will be an example implementation.
 
