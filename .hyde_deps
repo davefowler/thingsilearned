@@ -528,10 +528,16 @@
 !!python/unicode 'things/cherry-picking-with-mercurial.markdown': [macros.j2, base.j2,
   thing.j2]
 !!python/unicode 'things/directory-replace.markdown': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/excel-to-mysql.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/exel-to-mysql': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/exitwp.markdown': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/git-from-mercurial.markdown': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/git-from-mercurial.markdown.inprogress': [macros.j2, base.j2,
+  thing.j2]
 !!python/unicode 'things/index.html': [macros.j2, base.j2]
 !!python/unicode 'things/pin-button.markdown': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/sock-bankruptcy.markdown': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/sock-bankruptsy.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/sql-joins-explained.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/static-site.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/you-and-your-startup.markdown': [macros.j2, base.j2, thing.j2]
