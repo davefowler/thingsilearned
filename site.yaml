@@ -16,13 +16,9 @@ context:
     data:
         menu:
             -
-                name: Home
-                description: Home Page
-                url: /index.html
-            -
                 name: Things
                 description: Things I Learned
-                url: /things/index.html
+                url: /index.html
             -
                 name: About
                 description: About

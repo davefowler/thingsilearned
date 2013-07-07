@@ -4200,6 +4200,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 22px;
   margin-bottom: 0px;
   list-style: none;
+  float: right;
   background-color: #ffffff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;

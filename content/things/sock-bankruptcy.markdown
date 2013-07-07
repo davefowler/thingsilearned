@@ -17,7 +17,8 @@ I've been quite happy with them and it seems like this sock should continue to b
 
 Justin and I are of course not the only ones who've come up with or even named this brilliant idea.  There's already a website on it - [sockbackruptcy.com][sockbankruptcy]
 
+Also, there's an entire service designed to keep your essentials steadily stocked.  I haven't used them but I know a few people who really like it.  If interested checkout [Manpacks][]
 
 [sockbankruptcy]: http://sockbankruptcy.com/ "Sock Bankruptcy"
 [sock]: http://www.amazon.com/Hanes-Mens-Pack-Cushion-Black/dp/B001OAMTQI/?keywords=black+socks&qid=1368654625&ref=sr_1_1&ie=UTF8&sr=8-1
-
+[Manpacks]: http://www.manpacks.com/

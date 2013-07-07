@@ -9,15 +9,13 @@
   <meta name="description" content="{{ resource.meta.description }}">
   <meta name="author" content="{{ resource.meta.author }}">
 
-  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="{{ resource.meta.viewport }}">
-
   {% block favicons %}
   <link rel="shortcut icon" href="{{ media_url('/favicon.ico') }}">
   {% endblock favicons %}
 
   {% block css %}
   <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap-responsive.css') }}">
   <style>
     .header h3 { color: #ccc; }

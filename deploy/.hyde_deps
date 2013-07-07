@@ -8,12 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="Dave Fowler">
 
-  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="">
-
     <link rel="shortcut icon" href="/favicon.ico">
   
     <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/media/bootstrap/css/bootstrap-responsive.css">
   <style>
     .header h3 { color: #ccc; }
@@ -34,15 +32,9 @@
                                                             <nav >
     <ul class='breadcrumb'>
                 <li>
-            <a title="Home Page"
-                class="button white"
-                href="/">
-                Home
-            </a>
-                              <span class="divider">/</span>        </li>        <li>
             <a title="Things I Learned"
                 class="button white"
-                href="/things/">
+                href="/">
                 Things
             </a>
                               <span class="divider">/</span>        </li>        <li>

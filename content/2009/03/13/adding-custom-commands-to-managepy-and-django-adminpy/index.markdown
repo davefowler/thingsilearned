@@ -14,33 +14,33 @@ In Django it is very straight forward to add extra commands to the manage.py and
 
 In the past I'd add these  to make stand alone scripts that used the Django libraries.
 
-from django.conf import settings
-from django.core.management import setup_environ
-setup_environ( settings )
+    from django.conf import settings
+    from django.core.management import setup_environ
+    setup_environ(settings)
 
 The method works well but I find it cleaner to add commands to the manage and django-admin scripts instead of having several stand alone scripts.  The desired effect is to be able to run
 
-**$ ./manage.py your_command_name**
+    $ ./manage.py your_command_name
 
 instead of python your_command_name.py.  Big difference?  No...  But I think on a large project it adds organization and its some sort of a standard in the event that others will be using your code.
 
 In the app which the command is used for make the following directory structure:
 
-    
-        management/
+
+    management/
+        __init__.py
+        commands/
             __init__.py
-            commands/
-                __init__.py
-                your_command_name.py
+            your_command_name.py
 
 
-Then in your file (your_command_name.py) paste the following code, puting the functions to run in the handle_noargs function.
+Then in your file (*your_command_name.py*) paste the following code, puting the functions to run in the handle_noargs function.
 
-from django.core.management.base import NoArgsCommand
+    from django.core.management.base import NoArgsCommand
 
-class Command(NoArgsCommand):
-help = "Describe the Command Here"
-def handle_noargs(self, **options):
-< your code here >
+    class Command(NoArgsCommand):
+        help = "Describe the Command Here"
+        def handle_noargs(self, **options):
+            < your code here >
 
-That's it!  You can also do some more complicated functionality with command options.  Take a look at commands listed in /django/core/management/commands for examples there.
+That's it!  You can also do some more complicated functionality with command options.  Take a look at commands listed in */django/core/management/commands* for examples there.

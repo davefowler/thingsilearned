@@ -1,1 +1,2 @@
 lessc content/media/bootstrap/less/bootstrap.less > content/media/bootstrap/css/bootstrap.css
+cp content/media/bootstrap/css/bootstrap.css deploy/media/bootstrap/css/bootstrap.css

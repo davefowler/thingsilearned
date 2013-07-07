@@ -2,8 +2,9 @@
 comments: true
 date: '2007-04-26 02:02:12'
 slug: about
-title: ''
+title: 'About'
 wordpress_id: 2
+extends: thing.j2
 ---
 
 <img src="{{media_url('images/profile.jpg') }}" />
