@@ -529,6 +529,7 @@
 !!python/unicode 'things/cherry-picking-with-mercurial.markdown': [macros.j2, base.j2,
   thing.j2]
 !!python/unicode 'things/directory-replace.markdown': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/drawn-to-write.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/excel-to-mysql.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/exel-to-mysql': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/exitwp.markdown': [macros.j2, base.j2, thing.j2]
