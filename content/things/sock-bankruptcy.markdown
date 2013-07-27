@@ -2,6 +2,7 @@
 date: '2013-07-07'
 title: 'Sock Bankruptcy'
 category: life
+image: /media/images/sock-bankruptcy.png
 ---
 Over the past several years my sock drawer had become a stuffed archive of non-matching singles.  I dislike throwing one sock away just because its pair got a hole.  My thought was that since the socks were bought in 6 packs eventually another single in a pair would fail and then it would again have a match!
 
@@ -10,8 +11,6 @@ Its great logic, but in the long run it doesn't end up working out as I rarely b
 So a few weeks ago, off of the usually excellent advice of my friend and co-worker Justin Davis, I committed what he called sock bankruptcy.  I'd thought about the idea before, and he'd actually gone through with it and highly recommended it.
 
 The idea simply is to throw all of your socks away, and buy around $80 of new socks.  Another important aspect is that you buy those socks online and save that link for later.  I ended up going with [this pair of Hanes socks][sock].
-
-[![sock bankruptcy sock](http://ecx.images-amazon.com/images/I/819OKHko6lL._SY679_.jpg)][sock]
 
 I've been quite happy with them and it seems like this sock should continue to be produced for quite a while.  I've also been quite happy with not having to worry about pairing my socks after watching, nor walking around with mismatches.
 
