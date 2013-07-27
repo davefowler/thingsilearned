@@ -5,6 +5,9 @@ slug: javascript-chess-game
 title: Chess in Javascript
 wordpress_id: 777
 category: code
+blocksWide: 4
+blocksHigh: 4
+image: 'http://thingsilearned.files.wordpress.com/2012/11/screen-shot-2012-11-22-at-4-15-41-am.png'
 ---
 
 The Chartio team has grown now and several months ago I had to stop coding completely and focus on CEO tasks. I've missed programming a lot, and tonight, the night before Thanksgiving and one of the first breaks I've gotten, I created a little javascript chess game and AI.

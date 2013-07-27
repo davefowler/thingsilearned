@@ -13,12 +13,14 @@ description: Here's a list of some things I've learned.
     border-radius: 4px;
     position: relative;
     margin-bottom: 30px;
+    background-position:center;
 }
 
 .thing h3 {
+    background-color: inherit;
     font-size: 16px;
     font-color: blue;
-    padding: 0px;
+    padding: 10px;
     line-height: 1.4em;
 }
 
@@ -32,13 +34,10 @@ description: Here's a list of some things I've learned.
    background: #FAC069;
 }
 
-.padded {
-    padding: 10px;
-}
-
 .thing small {
    display: block;
    font-size: .8em;
+   padding: 10px;
 }
 
 </style>
@@ -46,8 +45,7 @@ description: Here's a list of some things I've learned.
 <div class="things row">
 {% for thing in site.content.walk_resources_sorted_by_date() %}
 <a href="{{ thing.meta.external_url or content_url(thing.url) }}" class="thing {{ thing.meta.category }} span{{ thing.meta.blocksWide }}"
-   style="height: {{ thing.meta.blocksHigh*85 - 30 }}px;">
-  <div class="padded">
+   style="height: {{ thing.meta.blocksHigh*85 - 30 }}px; {% if thing.meta.image %}background-image: url('{{ thing.meta.image }}');{% endif %}">
   <h3>{{ thing.meta.title }}
     {% if thing.meta.external_url %}<small>chartio.com</small>{% endif %}
   </h3>
@@ -57,7 +55,6 @@ description: Here's a list of some things I've learned.
       {{ thing.meta.date }}
     </time>
   </small>
-  </div>
 </a>
 {% endfor %}
 
