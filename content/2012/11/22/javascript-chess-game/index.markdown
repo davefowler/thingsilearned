@@ -13,7 +13,6 @@ image: 'http://thingsilearned.files.wordpress.com/2012/11/screen-shot-2012-11-22
 The Chartio team has grown now and several months ago I had to stop coding completely and focus on CEO tasks. I've missed programming a lot, and tonight, the night before Thanksgiving and one of the first breaks I've gotten, I created a little javascript chess game and AI.
 
 If you're interested you can [play the game here][chess] or checkout the [source code here](https://github.com/davefowler/chess).
-[![](http://thingsilearned.files.wordpress.com/2012/11/screen-shot-2012-11-22-at-4-15-41-am.png)](http://thingsilearned.files.wordpress.com/2012/11/screen-shot-2012-11-22-at-4-15-41-am.png)
 
 I utilized [jhlywa's helpful chess.js library](https://github.com/jhlywa/chess.js) for some of the move intelligence and game status storage. It relies on the [Forsyth-Edwards Notation (FEN)](http://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation) and I found it quite simple to use. It has an odd implementation of an object constructor so extending the class was difficult, but typically only one instance of the chess object is used anyway so I just kept it simple and appended a few functions on to the instance for now.
 

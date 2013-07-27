@@ -8,7 +8,7 @@ image: /media/images/drawn-to-write.jpg
 
 I constantly get the urge to write.  Every time I read or learn something I imagine myself finding my notebook or computer and writing about it.  Its not so much because I think I have something especially novel to say, or because I think anyone will read it.  Mostly I like to write about the *things I learn* as a way of engaging and as a process of solidifying the thoughts so they can be built on top of.
 
-Rarely do I ever act on this urge, and when I do its typically a disappointing experience as what ends up on the paper is never close to the impressive work I'd fantasized.
+Rarely do I ever act on this urge, and when I do it is typically a disappointing experience as what ends up on the paper is never close to the impressive work I'd fantasized.
 
 Which reminds me of point 5 of a great essay I read recently on [How to Write Less Badly][writelessbadly].
 
