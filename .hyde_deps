@@ -545,9 +545,13 @@
 !!python/unicode 'things/git-from-mercurial.markdown.inprogress': [macros.j2, base.j2,
   thing.j2]
 !!python/unicode 'things/index.html': [macros.j2, base.j2]
+!!python/unicode 'things/informationdashboarddesign.markdown': [macros.j2, base.j2,
+  thing.j2]
 !!python/unicode 'things/pin-button.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/sock-bankruptcy.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/sock-bankruptsy.markdown': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/sql-': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/sql-education.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/sql-joins-explained.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/static-site.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/you-and-your-startup.markdown': [macros.j2, base.j2, thing.j2]
