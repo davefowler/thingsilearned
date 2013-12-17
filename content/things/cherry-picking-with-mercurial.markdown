@@ -1,9 +1,11 @@
 ---
-date: '2013-05-23'
-title: 'Cherry Picking With Mercurial'
+date: "2013-05-23"
+title: Cherry Picking With Mercurial
 category: code
 comments: true
+published: true
 ---
+
 Merging a full branch in mercurial is quite easy.
 
     hg update <target branch name>
