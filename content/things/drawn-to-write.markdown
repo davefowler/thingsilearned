@@ -12,7 +12,7 @@ Rarely do I ever act on this urge, and when I do it is typically a disappointing
 
 Which reminds me of point 5 of a great essay I read recently on [How to Write Less Badly][writelessbadly].
 
-> **5. Everyone's unwritten work is brilliant.**
+> #### 5. Everyone's unwritten work is brilliant.
 >
 > And the more unwritten it is, the more brilliant it is. We have all met those glib, intimidating graduate students or faculty members. They are at their most dangerous holding a beer in one hand and a cigarette in the other, in some bar or at an office party. They have all the answers. They can tell you just what they will write about, and how great it will be.
 >

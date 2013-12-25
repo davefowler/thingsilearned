@@ -1,10 +1,6 @@
 body {
   font-size: 20px;
-  line-spacing: 1.6em;
-}
-
-.page-header {
-  margin: 0px;
+  line-height: 1.6em;
 }
 
 .comments {
@@ -32,4 +28,30 @@ a {
 a:hover {
   text-decoration: underline;
   color: inherit;
+}
+
+blockquote {
+  margin: 20px;
+}
+
+.header h3 { color: inherit; }
+
+.hero-unit {
+  background-image:url('{{ media_url("images/hero.jpg") }}');
+  background-size: 100%;
+  height: 300px;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.breadcrumb {
+  background-color: inherit;
+}
+
+.header {
+  margin-top: 20px;
+}
+
+#section-titles {
+  margin-bottom: 10px;
 }
