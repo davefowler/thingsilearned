@@ -1,0 +1,27 @@
+---
+extends: base.j2
+default_block: main
+title: Things I Learned
+description: Here's a list of some things I've learned.
+---
+
+
+<div class="row" id="section-titles">
+  <div class="span4">Posts</div>
+  <div class="span4">Essays</div>
+  <div class="span4">Projects</div>
+</div>
+
+<div class="row" id="sections">
+  <div class="span4" id="posts">
+    {% for thing in site.content.walk_resources_sorted_by_date() %}
+      <div class="post">
+        <a href="{{ thing.meta.external_url or content_url(thing.url) }}">{{ thing.meta.title }}</a>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="span4" id="essays">
+  </div>
+  <div class="span4" id="projects">
+  </div>
+</div>
