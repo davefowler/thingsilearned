@@ -534,6 +534,8 @@
 !!python/unicode 'things.html': [macros.j2, base.j2]
 !!python/unicode 'things/10-reasons-to-not-build-your-own-dashboard.markdown': [macros.j2,
   base.j2, thing.j2]
+!!python/unicode 'things/a-year-since-launch.markdown': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/chartio-csv.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/cherry-picking-with-mercurial.markdown': [macros.j2, base.j2,
   thing.j2]
 !!python/unicode 'things/directory-replace.markdown': [macros.j2, base.j2, thing.j2]
@@ -549,6 +551,7 @@
   thing.j2]
 !!python/unicode 'things/pin-button.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/putaforkinbigdata.markdown': [macros.j2, base.j2, thing.j2]
+!!python/unicode 'things/riley-newman-interview.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/sock-bankruptcy.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/sock-bankruptsy.markdown': [macros.j2, base.j2, thing.j2]
 !!python/unicode 'things/sql-': [macros.j2, base.j2, thing.j2]

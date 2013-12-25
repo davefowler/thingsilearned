@@ -1,16 +1,6 @@
 {% extends "base.j2" %}
 
 {% block main %}
-
-<style>
-.comments {
-    margin-top: 50px;
-}
-#commenthr {
-    margin-top: 50px;
-}
-</style>
-
 <div class="row">
      <div class="span8">
          <article class="thing">
@@ -19,7 +9,7 @@
          {% endif %}
 
          <div class='page-header'>
-               <h1>{{ resource.meta.title }}</h1>
+               <h1>{{ resource.meta.title }}<small>by {{ resource.meta.author }} on {{ resource.meta.date }}</small></h1>
          </div>
          {% filter markdown %}{% block thing_content %}{% endblock %}{% endfilter %}
          </article>

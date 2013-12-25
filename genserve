@@ -1,1 +1,1 @@
-rm -fr deploy/*; hyde gen; hyde serve -p 8081;
+rm -fr deploy/*; ../chartio-hyde/hyde/h gen; ../chartio-hyde/hyde/h serve -p 8081;
