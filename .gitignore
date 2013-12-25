@@ -1,2 +1,4 @@
 *.pyc
 deploy
+.hyde_deps
+engine.log

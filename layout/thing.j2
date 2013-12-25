@@ -12,6 +12,7 @@
                <h1>{{ resource.meta.title }}<small>by {{ resource.meta.author }} on {{ resource.meta.date }}</small></h1>
          </div>
          {% filter markdown %}{% block thing_content %}{% endblock %}{% endfilter %}
+         {% filter markdown %}{% block after_thing_content %}{% endblock %}{% endfilter %}
          </article>
      </div>
 </div>

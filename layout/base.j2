@@ -14,9 +14,8 @@
   {% endblock favicons %}
 
   {% block css %}
-  <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ media_url('css/bootstrap.min.css') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap-responsive.css') }}">
   <link rel="stylesheet" href="{{ media_url('css/til.css') }}">
   <style>
     .header h3 { color: #ccc; }
@@ -38,10 +37,10 @@
           {% block header -%}
               <div class='header'>
                 <div class="row">
-                  <div class="span5">
+                  <div class="span8">
                     {% block pageheader %}<h3>ThingsILearned <small>By Dave Fowler</small></h3>{% endblock %}
                   </div>
-                  <div class="span3">
+                  <div class="span4 text-right">
                     {% block nav %}
                     {% from "macros.j2" import render_nav with context %}
                     {{ render_nav(menu) }}
@@ -63,7 +62,6 @@
   {% block js %}
 
   {% block scripts %}
-  <script type="text/javascript" src="{{ media_url('bootstrap/js/bootstrap.js') }}"></script>
   {% endblock scripts %}
 
   {% endblock js %}
