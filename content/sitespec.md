@@ -1,4 +1,6 @@
-# ThingsILearned Format Design spec
+---
+title: ThingsILearned Format Design spec
+---
 
 - ThingsILearned is not simply a blog
 - Projects should have their own style
@@ -11,10 +13,10 @@
 - Posts that are no longer relevant should be noted as such in some way (ie. Orbited stuff)
 - The font should be large, well spaced and readable
 
-Main Sections
+## Main Sections
 
  - Posts
  - Essays
  - Projects
- 
+
 

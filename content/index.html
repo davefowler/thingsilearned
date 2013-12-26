@@ -7,23 +7,23 @@ description: Here's a list of some things I've learned.
 
 <div class="row hero-unit">
   <div class="span9 offset2">
-    I learn the best when I write about what I've learned.  Here is where I share some of my writing, essays, and projects.  Lately I've been focused on <a href="http://chartio.com">Chartio.com</a> and publically post considerably less.
+    I learn the best when I write about what I'm learning.  Here I share some of my writing, essays, and projects.  Lately I've been focused on <a href="http://chartio.com">Chartio.com</a> and publically post considerably less.
   </div>
 </div>
 
 <div class="row" id="section-titles">
   <div class="span2"><h4>Posts</h4></div>
-  <div class="span6 key">
+  <div class="span5 key">
     <ul>
       <li class="external">external</li>
       <li>internal</li>
     </ul>
   </div>
-  <div class="span4"><h4>Essays</h4></div>
+  <div class="span5"><h4>Essays</h4></div>
 </div>
 
 <div class="row" id="sections">
-  <div class="span8" id="posts">
+  <div class="span7" id="posts">
     <ul>
     {% for thing in site.content.walk_resources_sorted_by_posts() %}
       <li class="post {% if thing.meta.external_url %}external{% endif %}">
@@ -32,23 +32,27 @@ description: Here's a list of some things I've learned.
     {% endfor %}
     </ul>
   </div>
-  <div class="span4">
+  <div class="span5">
 
     <div id="essays">
+      <ul>
       {% for thing in site.content.walk_resources_sorted_by_essays() %}
-      <div class="post">
+      <li class="post {% if thing.meta.external_url %}external{% endif %}">
         <a href="{{ thing.meta.external_url or content_url(thing.url) }}">{{ thing.meta.title }}</a>
-      </div>
+      </li>
       {% endfor %}
+      </ul>
     </div>
 
     <div><h4>Projects</h4></div>
 
     <div id="projects">
+      <ul>
       {% for thing in site.content.walk_resources_sorted_by_projects() %}
-      <div class="post">
+      <li class="post {% if thing.meta.external_url %}external{% endif %}">
         <a href="{{ thing.meta.external_url or content_url(thing.url) }}">{{ thing.meta.title }}</a>
-      </div>
+      </li>
       {% endfor %}
+      </ul>
     </div>
 </div>
