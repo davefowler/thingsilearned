@@ -112,3 +112,7 @@ li {
 .key ul li.external {
   list-style-type: circle;
 }
+
+.opaque {
+  opacity: .5;
+}

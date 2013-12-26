@@ -15,8 +15,8 @@ description: Here's a list of some things I've learned.
   <div class="span2"><h4>Posts</h4></div>
   <div class="span5 key">
     <ul>
-      <li class="external">external</li>
-      <li>internal</li>
+      <li class="external"><a href="#">external</a></li>
+      <li class="internal"><a href="#">internal</a></li>
     </ul>
   </div>
   <div class="span5"><h4>Essays</h4></div>
@@ -56,3 +56,20 @@ description: Here's a list of some things I've learned.
       </ul>
     </div>
 </div>
+
+<script src="/media/js/libs/jquery-2.0.2.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.key .external').click(function(e) {
+    e.preventDefault();
+    $('.key .external').toggleClass('opaque');
+    $('.post.external').toggleClass('hide');
+  });
+  $('.key .internal').click(function(e) {
+    e.preventDefault();
+    $('.key .internal').toggleClass('opaque');
+    $('.post').not('.external').toggleClass('hide');
+  });
+});
+</script>
