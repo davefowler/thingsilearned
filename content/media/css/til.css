@@ -88,16 +88,22 @@ li {
   line-height: 1.6em;
 }
 
-ul.key {
+.key {
   font-size: .8em;
+  line-height: 30px;
+  margin-top: 8px;
 }
 
-ul.key li {
+.key ul {
+  width: 220px;
+}
+
+.key ul li {
   list-style-type: disc;
   float: right;
   margin-left: 50px;
 }
 
-ul.key li.external {
+.key ul li.external {
   list-style-type: circle;
 }
