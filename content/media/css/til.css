@@ -22,12 +22,16 @@ h1 small {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #000;
 }
 
 a:hover {
   text-decoration: underline;
   color: inherit;
+}
+
+#logo a {
+  color: #333;
 }
 
 blockquote {
@@ -44,6 +48,10 @@ blockquote {
   border-radius: 2px;
 }
 
+.hero-unit a {
+  color: inherit;
+}
+
 .breadcrumb {
   background-color: inherit;
 }
@@ -54,4 +62,42 @@ blockquote {
 
 #section-titles {
   margin-bottom: 10px;
+}
+
+pre {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #F8F8FF;
+  font-size: inherit;
+}
+
+h2 {
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+}
+
+ul {
+  list-type-style: disk;
+}
+
+ul li.external {
+  list-style-type: circle;
+}
+
+li {
+  line-height: 1.6em;
+}
+
+ul.key {
+  font-size: .8em;
+}
+
+ul.key li {
+  list-style-type: disc;
+  float: right;
+  margin-left: 50px;
+}
+
+ul.key li.external {
+  list-style-type: circle;
 }
