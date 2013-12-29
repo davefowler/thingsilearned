@@ -5,7 +5,7 @@
      <div class="span10">
          <article class="thing">
           {% if resource.meta.image %}
-           <img class='thing-image' src="{{ resource.meta.image }}"/>
+           <div class="hero-unit" style="background-image: url('{{resource.meta.image }}');"></div>
          {% endif %}
 
          <div class='page-header'>

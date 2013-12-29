@@ -116,3 +116,8 @@ li {
 .opaque {
   opacity: .5;
 }
+
+.thing .hero-unit {
+  height: 100px;
+  background-position: center;
+}
