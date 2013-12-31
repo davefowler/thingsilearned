@@ -24,6 +24,10 @@ context:
                 description: About
                 url: /about/
 
+syntax:
+    options:
+        lineanchors: line
+
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2010-01-01 00:00:00
