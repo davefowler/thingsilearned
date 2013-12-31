@@ -2,3 +2,5 @@ extends: thing.j2
 default_block: thing_content
 blocksWide: 2
 blocksHigh: 2
+author: dave
+pagetype: post

@@ -4,60 +4,72 @@ default_block: main
 title: Things I Learned
 description: Here's a list of some things I've learned.
 ---
-{% from "macros.j2" import render_excerpt with context %}
-<section class="blog_excerpt">
 
-<style>
-.thing {
-    background: #222;
-    border-radius: 4px;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-bottom: 30px;
-    background-position:center;
-}
-
-.thing h3 {
-    background-color: inherit;
-    font-size: 16px;
-    font-color: blue;
-    padding: 10px;
-    line-height: 1.4em;
-}
-
-.thing time {
-    color: #777;
-    position: absolute;
-    bottom: 5px;
-}
-
-.thing.chartio {
-   background: #FAC069;
-}
-
-.thing small {
-   display: block;
-   font-size: .8em;
-   padding: 10px;
-}
-
-</style>
-
-<div class="things row">
-{% for thing in site.content.walk_resources_sorted_by_date() %}
-<a href="{{ thing.meta.external_url or content_url(thing.url) }}" class="thing {{ thing.meta.category }} span{{ thing.meta.blocksWide }}"
-   style="height: {{ thing.meta.blocksHigh*85 - 30 }}px; {% if thing.meta.image %}background-image: url('{{ thing.meta.image }}');{% endif %}">
-  <h3>{{ thing.meta.title }}
-    {% if thing.meta.external_url %}<small>chartio.com</small>{% endif %}
-  </h3>
-  <br>
-  <small class="subtext">
-    <time datetime="{{ thing.meta.date }}">
-      {{ thing.meta.date }}
-    </time>
-  </small>
-</a>
-{% endfor %}
-
+<div class="row hero-unit">
+  <div class="span9 offset2">
+    I learn the best when I write about what I'm learning.  Here I share some of my writing, essays, and projects.  Lately I've been focused on <a href="http://chartio.com">Chartio.com</a> and publically post considerably less.
+  </div>
 </div>
+
+<div class="row" id="section-titles">
+  <div class="span2"><h4>Posts</h4></div>
+  <div class="span5 key">
+    <ul>
+      <li class="external"><a href="#">external</a></li>
+      <li class="internal"><a href="#">internal</a></li>
+    </ul>
+  </div>
+  <div class="span5"><h4>Essays</h4></div>
+</div>
+
+<div class="row" id="sections">
+  <div class="span7" id="posts">
+    <ul>
+    {% for thing in site.content.walk_resources_sorted_by_posts() %}
+      <li class="post {% if thing.meta.external_url %}external{% endif %}">
+        <a href="{{ thing.meta.external_url or content_url(thing.url) }}">{{ thing.meta.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="span5">
+
+    <div id="essays">
+      <ul>
+      {% for thing in site.content.walk_resources_sorted_by_essays() %}
+      <li class="post {% if thing.meta.external_url %}external{% endif %}">
+        <a href="{{ thing.meta.external_url or content_url(thing.url) }}">{{ thing.meta.title }}</a>
+      </li>
+      {% endfor %}
+      </ul>
+    </div>
+
+    <div><h4>Projects</h4></div>
+
+    <div id="projects">
+      <ul>
+      {% for thing in site.content.walk_resources_sorted_by_projects() %}
+      <li class="post {% if thing.meta.external_url %}external{% endif %}">
+        <a href="{{ thing.meta.external_url or content_url(thing.url) }}">{{ thing.meta.title }}</a>
+      </li>
+      {% endfor %}
+      </ul>
+    </div>
+</div>
+
+<script src="/media/js/libs/jquery-2.0.2.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.key .external').click(function(e) {
+    e.preventDefault();
+    $('.key .external').toggleClass('opaque');
+    $('.post.external').toggleClass('hide');
+  });
+  $('.key .internal').click(function(e) {
+    e.preventDefault();
+    $('.key .internal').toggleClass('opaque');
+    $('.post').not('.external').toggleClass('hide');
+  });
+});
+</script>

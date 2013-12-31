@@ -24,6 +24,10 @@ context:
                 description: About
                 url: /about/
 
+syntax:
+    options:
+        lineanchors: line
+
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2010-01-01 00:00:00
@@ -57,7 +61,23 @@ publisher:
             url: git@github.com:davefowler/davefowler.github.com.git
 
 sorter:
-    date:
+    posts:
         attr:
-            - meta.date # Note: change to meta.date once its working
+            - meta.date
         reverse: true
+        filters:
+            meta.pagetype: post
+
+    essays:
+        attr:
+            - meta.date
+        reverse: true
+        filters:
+            meta.pagetype: essay
+
+    projects:
+        attr:
+            - meta.date
+        reverse: true
+        filters:
+            meta.pagetype: project

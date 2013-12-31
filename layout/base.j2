@@ -14,13 +14,10 @@
   {% endblock favicons %}
 
   {% block css %}
-  <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ media_url('css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ media_url('css/pygments/github.css') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap-responsive.css') }}">
-  <style>
-    .header h3 { color: #ccc; }
-    .hero-unit { background-image:url('{{ media_url("images/hero.jpg") }}'); }
-  </style>
+  <link rel="stylesheet" href="{{ media_url('css/til.css') }}">
   {% endblock css %}
 
   {% block headjs %}
@@ -37,10 +34,10 @@
           {% block header -%}
               <div class='header'>
                 <div class="row">
-                  <div class="span5">
-                    {% block pageheader %}<h3>ThingsILearned <small>By Dave Fowler</small></h3>{% endblock %}
+                  <div class="span8">
+                    {% block pageheader %}<h3 id="logo"><a href="/">ThingsILearned</a> <small><a href="/about">By Dave Fowler</a></small></h3>{% endblock %}
                   </div>
-                  <div class="span3">
+                  <div class="span4 text-right">
                     {% block nav %}
                     {% from "macros.j2" import render_nav with context %}
                     {{ render_nav(menu) }}
@@ -60,11 +57,7 @@
   </div> <!--! end of #container -->
   {% endblock content%}
   {% block js %}
-
-  {% block scripts %}
-  <script type="text/javascript" src="{{ media_url('bootstrap/js/bootstrap.js') }}"></script>
-  {% endblock scripts %}
-
+    {% block scripts %}{% endblock scripts %}
   {% endblock js %}
 <script type="text/javascript">
 

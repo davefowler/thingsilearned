@@ -1,2 +1,2 @@
-extends:
-default_block:
+comments: false
+pagetype: project

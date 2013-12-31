@@ -1,0 +1,5 @@
+{%extends "thing.j2" %}
+
+{% block after_thing_content %}
+This post has been moved to [{{ resource.meta.moved_to }}]({{ resource.meta.moved_to }}).
+{% endblock %}
