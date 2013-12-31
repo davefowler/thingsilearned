@@ -41,7 +41,7 @@ blockquote {
 .header h3 { color: inherit; }
 
 .hero-unit {
-  background-image:url('{{ media_url("images/hero.jpg") }}');
+  background-image:url('{{ media_url("images/hero.png") }}');
   background-size: 100%;
   height: 300px;
   color: #fff;
