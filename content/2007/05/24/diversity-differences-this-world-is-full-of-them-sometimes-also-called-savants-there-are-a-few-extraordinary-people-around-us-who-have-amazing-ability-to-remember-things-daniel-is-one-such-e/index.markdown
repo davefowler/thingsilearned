@@ -6,6 +6,7 @@ title: Diversity! Differences! Mind!! Man this World in unequal!!
 wordpress_id: 24
 tags:
 - thingsilearned
+depricated: "This post was created by Priyesh Jain when it was a group blog/site.  I'm now depricating all posts that aren't mine as it has become more of a personal site."
 ---
 
 Sometimes also called savants, there are a few extraordinary people around us who have amazing ability to remember things. Daniel is one such extraordinarily gifted man born out of East London who suffered seizures at the age of four, after which life was never the same for him or the people around him. With the ability to perceive numbers as figures and colors, he can solve enormous calculations in his mind just by visualizing the shapes, colors, and sound in a jiffy. Not only that, he has also proven his ability to learn a new language in a shocking record time of one week. There are several people around the world who are known to have the ability to remember and learn, but unfortunately a lot of times such gifted people suffer lack of social skills. Daniel however, unlike his counterparts enjoys the best of both the worlds. He is funny, witty and a genius all at the same time, the perfect combination.

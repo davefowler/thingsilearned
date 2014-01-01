@@ -14,7 +14,7 @@ I recently suspected the dreaded buffer overrun in a project I'm hacking for wor
 
 I was excited to learn that macs come with their own malloc debuger, entitled Malloc Debugger.  How handy!  Through several attempts to use it on my application however I kept getting the same error.
 
-_Unable to read malloc information from (null)_
+    Unable to read malloc information from (null)
 
 I'm probably just missing some libraries to include that would have been had I been using Xcode.  Instead I was compiling with g++ -g.
 
@@ -23,6 +23,3 @@ Anyway, I eventually checked out [Electric Fence](http://linux.softpedia.com/get
 Copy the compiled library libefence.a to /usr/lib/ and re-compile your application with the flag -lefence.
 
 Upon execution it will spit out problems you have in your malloc code and die if there was a buffer overrun.  Its a great tool to turn on while you work as you'll be informed of any overwrites as you're developing.  Not after the whole thing is done and quitting at odd times :).
-
-
-Dave

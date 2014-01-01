@@ -8,6 +8,7 @@ tags:
 - home remedies
 - life
 - tendonitis
+depricated: "This post was created by Vu Dang when it was a group blog/site.  I'm now depricating all posts that aren't mine as it has become more of a personal site."
 ---
 
 While I was dealing with tendonitis, I figured out how to open a variety of jars and bottles without too much strain. Here are some of the methods I've acquired:

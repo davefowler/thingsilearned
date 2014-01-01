@@ -7,9 +7,11 @@ wordpress_id: 62
 tags:
 - JaredSIM
 - life
+depricated: "This post was created by Priyesh Jain when it was a group blog/site.  I'm now depricating all posts that aren't mine as it has become more of a personal site."
+
 ---
 
-	 	 	 	 	 	 	 	
+
 
 
 Facebook has evolved as one of the most powerful way of social networking, sharing photographs, video, blogs as well as communicating with friends and networks. Fred Stutzman is a Ph.D. student at the University of North Carolina at Chapel Hill's who studied facebook and it's usage at his university. As he goes to describe his plan of the longitudinal study over a period of one semester, some of his assumptions are totally reestablished through the statistics. He basically studies the social behavior of freshman at University of North Carolina, Chapel Hill. Alarmingly, 85% of college freshman were already on the facebook as they joined as freshmen, and not only that, they also were already connected to on an avg 45 other freshmen coming in week one of the study itself. The increase in new users over the course of the semester came out to be up to 94% with student to student connections increased to about an avg of 100. Well ... this should definitely have been the initial assumption anyway. College does mitigate the social networking abilities of students :p These statistics however lead to the speculation of spreading of facebook through orientation sessions for the school. This is supported by the initial links and connections between the students coming in being about 144,000 friend network connection (week1) and increasing to 370,000 (at the end of sem) just for the freshman class of UNC.
@@ -20,7 +22,7 @@ Facebook has evolved as one of the most powerful way of social networking, shari
 
 
 
-[googlevideo=http://video.google.com/videoplay?docid=3910777240176719644&q=genre%3Aeducational&total=181251&start=20&num=10&so=0&type=search&plindex=7]
+[http://video.google.com/videoplay?docid=3910777240176719644&q=genre%3Aeducational&total=181251&start=20&num=10&so=0&type=search&plindex=7](http://video.google.com/videoplay?docid=3910777240176719644&q=genre%3Aeducational&total=181251&start=20&num=10&so=0&type=search&plindex=7)
 
 
 

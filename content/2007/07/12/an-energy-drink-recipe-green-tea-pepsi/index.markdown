@@ -8,6 +8,7 @@ tags:
 - drinks
 - recipe
 - thingsilearned
+depricated: "This post was created by Vu Dang when it was a group blog/site.  I'm now depricating all posts that aren't mine as it has become more of a personal site."
 ---
 
 Vu here. For a pumped up energy-drink (without all the added amino acids), I like to prepare a green tea and Pepsi mixture that not only tastes good, but has all the caffeine I'll need (about 40mg) and all the benefits that green tea[ potentially offers.](http://en.wikipedia.org/wiki/Potential_effects_of_tea_on_health)

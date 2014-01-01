@@ -4,6 +4,7 @@ date: '2007-07-15'
 slug: 1-through-n-steps-for-beginning-a-novel
 title: 1-through-N Steps for Beginning a Novel
 wordpress_id: 72
+depricated: "This post was created by Vu Dang when it was a group blog/site.  I'm now depricating all posts that aren't mine as it has become more of a personal site."
 ---
 
 I'd like to relate something that has occurred not once but thrice after receiving a great idea for a novel. These ideas seem to come from some strange nether place, if not handed from on high, so I'll add: I'm feeling pretty darn lucky if I get a good idea at all.

@@ -6,8 +6,9 @@ title: Fixing Autocorrect Behavior in MS Word
 wordpress_id: 57
 tags:
 - MS Word
-- Visual Basic
----
+- Visual Basic-
+depricated: "This post was created by Vu Dang when it was a group blog/site.  I'm now depricating all posts that aren't mine as it has become more of a personal site."
+--
 
 I'd like to discuss using macros to overcome a big limitation with Word's Autocorrect feature: the expansion of single-character autocorrect entries in words with apostrophes before the last character.
 

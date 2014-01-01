@@ -8,6 +8,7 @@ tags:
 - life
 - python
 - startup
+depricated: "This site was once a startup but is now my personal site.  This post had to do with the startup :)."
 ---
 
 Yesterday 3 guys moved with me into my parents basement.  I have amazingly supportive parents, though they often wonder whether they adopted me.  Most of us can't move to California for a week or two but we want to get started so we chose to do that here.  We're all set up on a collection of desks I've accumulated over the years and along with the coffee shop my sister and I setup down here two days ago we have a pretty awesome mini startup hub.

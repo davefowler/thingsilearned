@@ -7,6 +7,7 @@ wordpress_id: 70
 tags:
 - life
 - startup
+depricated: "This post was satire and amusing at the time but I'm depricating it because it doesn't go with the rest of the blog and I've grown more paraniod of someone taking it as something serious."
 ---
 
 All the women I meet lately ask me what it is that I do.  When I tell them I'm doing a startup they look at me with their big doll eyes like a scared Lana Wood with the mysterious Sean Connery and say, "Isn't that dangerous?"  I usually respond with a simple "Sometimes (dramatic pause) but a man's gotta do..."  And with that she becomes putty in my hands and I've pretty much acquired a VIP pass to her pants.

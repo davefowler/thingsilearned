@@ -19,14 +19,11 @@ Most people in technology have had to at one point decide whether to give up the
 
 [](http://thingsilearned.files.wordpress.com/2007/07/sign.jpg)
 
-
 [![Computers and Lemonade Sign](http://thingsilearned.files.wordpress.com/2007/07/sign.jpg)](http://thingsilearned.files.wordpress.com/2007/07/sign.jpg)
-
 
 We set up shop on my street and started fixing computers and selling lemonade.  We were open for a good 8 hours before it got dark.  Unfortunately my street is more like a county road and we only saw about 6 cars go by.  None of them apparently had their computers with them, or at least the ones they did have weren't broken.
 
 We did fix 3 computers.  Two were for friends we called during our telemarketing campaign.  They had much better bargaining techniques than us  (they were female) as they got our quality service for the price of two tacos and a chocolate frosty.  I'm pretty sure it was all from the dollar menu.  The other we fixed for my parents in exchange for a pitcher of lemonade, an investment that didn't pay out as we never actually sold any lemonade.
-
 
 [![Setting up the stand](http://thingsilearned.files.wordpress.com/2007/07/very-commited.jpg)](http://thingsilearned.files.wordpress.com/2007/07/very-commited.jpg)
 
@@ -35,20 +32,8 @@ One of the 6 cars stopped, backed up and said "Do you guys really fix computers?
 
 [](http://thingsilearned.files.wordpress.com/2007/07/sign.jpg)
 
-
-
-[
-
-
-![Waiting for customers](http://thingsilearned.files.wordpress.com/2007/07/100_1243.jpg)
-
-
-
-](http://thingsilearned.files.wordpress.com/2007/07/100_1243.jpg)
+[![Waiting for customers](http://thingsilearned.files.wordpress.com/2007/07/100_1243.jpg)](http://thingsilearned.files.wordpress.com/2007/07/100_1243.jpg)
 
 She never came back and by the time it got dark we knew we had some serious flaws in our business plan.  We decided to add a sound system to our outdoor computer setup and see if we could make it as an outdoor movie theater.  A few people showed up but they all just brought chips and soda instead of money.  We had problems legally monetizing that venture.
 
 After that day we discussed the flaws in the plan and decided that we had stupidly violated all three rules of business, which are each titled "Location".  We decided to try it again someday in a better spot but were soon back to being wrapped up in our busy technology lives and that day has yet to come.  I hope to one day find another business plan that allows me to do computer work outdoors.  I think people need to be close to nature, and computer don't have to change that.
-
-
-Dave
