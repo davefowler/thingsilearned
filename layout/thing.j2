@@ -11,6 +11,12 @@
          <div class='page-header'>
                <h1>{{ resource.meta.title }}<small>by {{ resource.meta.author }} on {{ resource.meta.date }}</small></h1>
          </div>
+         {% if resource.meta.depricated %}
+           <div class="deprication-note">
+             <b>Depricated:</b>
+             {{ resource.meta.depricated }}
+           </div>
+         {% endif %}
          {% filter markdown %}{% block thing_content %}{% endblock %}{% endfilter %}
          {% filter markdown %}{% block after_thing_content %}{% endblock %}{% endfilter %}
          </article>

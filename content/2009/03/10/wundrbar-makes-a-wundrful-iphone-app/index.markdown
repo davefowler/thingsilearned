@@ -4,9 +4,12 @@ date: '2009-03-10'
 slug: wundrbar-makes-a-wundrful-iphone-app
 title: Wundrbar makes a Wundrful iPhone App
 wordpress_id: 282
+depricated: "Unfortunately Wundrbar has shut down :(.  Hopefully something similar will return one day!"
 ---
 
-![](http://www.wundrbar.com/images/screenshot1.jpg)I have a lot of cool friends and a lot of other friends who try to be cool by owning iPhones. To those people I want to advertise a cool new App that was released in the store today by a few friends of mine:
+![](http://www.wundrbar.com/images/screenshot1.jpg)
+
+I have a lot of cool friends and a lot of other friends who try to be cool by owning iPhones. To those people I want to advertise a cool new App that was released in the store today by a few friends of mine:
 
 
 [Wundrbar](http://www.wundrbar.com/static/iphone)
@@ -19,22 +22,22 @@ Here's a list of a few things it does easily.
 
 
 
-	
+
   * check airfairs and book tickets
 
-	
+
   * easy buy on amazon
 
-	
+
   * find low gas prices
 
-	
+
   * public transport schedules
 
-	
+
   * Lists top links of popular websites
 
-	
+
   * etc. etc.
 
 

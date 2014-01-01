@@ -15,7 +15,9 @@ Recently I bought a junky Road bike to hold me over for a while in Minnesota whi
 
 But anyway, this new bike reminds me of why until last year I never really enjoyed biking.  I used to think it was because I didn't have good places to bike to, and that with the exception of a few extremists bicycling is a highly seasonal activity in Minnesota.
 
-![old-rusty-bike1](http://thingsilearned.files.wordpress.com/2009/05/old-rusty-bike1.jpg)But I was wrong.  Sure those things contribute but the main factor was the bike.  I always had cheap generic bikes from Target, Walmart, or some such place.  These bikes change gears horribly, are overweight, slow, and just ruin the overall biking experience.
+![old-rusty-bike1](http://thingsilearned.files.wordpress.com/2009/05/old-rusty-bike1.jpg)
+
+But I was wrong.  Sure those things contribute but the main factor was the bike.  I always had cheap generic bikes from Target, Walmart, or some such place.  These bikes change gears horribly, are overweight, slow, and just ruin the overall biking experience.
 
 A road bike is lightweight, designed for going fast, and gears change with ease.  All of the gears are helpful, not just the highest and lowest.  There's no struggling painfully up heavy inclines or excessive pedaling due to gears not shifting.  ![](http://www.abikestore.com/Merchant2/graphics/00000003/rb_rle18.jpg)
 

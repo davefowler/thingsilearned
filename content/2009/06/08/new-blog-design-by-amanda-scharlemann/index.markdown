@@ -10,6 +10,7 @@ post_tag:
 tags:
 - Design
 - thingsilearned
+depricated: "This blog design has since changed and is now my own."
 ---
 
 A few weeks ago I published a request for a [generous designer](http://thingsilearned.com/2009/04/12/wanted-generous-blog-designer/) to create a unique look for this blog.  [Amanda Scharlemann](http://gustaf.blc.edu/~ascharlemann08/Mandyland/Mandyland.html) was the first to respond and was a pleasure to work with!

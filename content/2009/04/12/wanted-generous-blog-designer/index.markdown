@@ -4,6 +4,7 @@ date: '2009-04-12'
 slug: wanted-generous-blog-designer
 title: 'Wanted: Generous Blog Designer'
 wordpress_id: 319
+depricated: "None needed anymore, thanks!"
 ---
 
 I'm currently doing a lot of research and experimenting in Marketing as its my weakest skill as a startup founder.  I want to make it one of my strengths, or at least become moderately good at it.  One of the marketing tools I'm going to be experimenting with is this blog.  To do that I really think it needs some sort of re-design, or rather a first-design as almost no design went into it in the first place.
@@ -25,13 +26,13 @@ Though I can't offer money,
 
 
 
-	
+
   1. Name and link of designer's site at the bottom of each page.
 
-	
+
   2. A blog article thanking, complimenting, and recommending the designer
 
-	
+
   3. Possible paid work on sites in the future
 
 
@@ -47,22 +48,22 @@ Here are some blogs, who's designs I really like.
 
 
 
-	
+
   * [http://sethgodin.typepad.com/](http://sethgodin.typepad.com)
 
-	
+
   * [http://www.37signals.com/svn/](http://www.37signals.com/svn/)
 
-	
+
   * [http://wufoo.com/blog/](http://wufoo.com/blog/)
 
-	
+
   * [http://www.avc.com/](http://www.avc.com/)
 
-	
+
   * [http://www.oswd.org/design/preview/id/3293](//www.oswd.org/design/preview/id/3293)
 
-	
+
   * [http://blog.posterous.com/](http://blog.posterous.com/)
 
 

@@ -6,19 +6,20 @@ title: Paper or Plastic?
 wordpress_id: 315
 ---
 
-![](http://districtlimerick.files.wordpress.com/2009/02/paper-vs-plastic1.jpg)I'm probably the last person to look this up but I've often wondered what the best answer to "Paper or Plastic?" really is.  The best answer ofcourse is neither.  I should bring my own bags, but I rarely preform ideally so that aside what's the best?
+![](http://districtlimerick.files.wordpress.com/2009/02/paper-vs-plastic1.jpg)
+I'm probably the last person to look this up but I've often wondered what the best answer to "Paper or Plastic?" really is.  The best answer ofcourse is neither.  I should bring my own bags, but I rarely preform ideally so that aside what's the best?
 
 It seems like paper would be more environmentally friendly because its renewable and degrades much faster.  Also its brown and reminds you of nature, so that has to be better environmentally right? Plastic bags use up a lot of oil, which we know is not nonrenewable.  But then how much oil is used to make paper bags?  Cutting down all those trees, shipping them, printing, gluing, etc.  The more extensive manufacturing process must take a considerable amount of oil right?
 
 [This article](http://www.msnbc.msn.com/id/18538484/) gives some quick facts on the costs of each:
 
 
-> 
+>
 
-> 
+>
 > To make all the bags we use each year, it takes 14 million trees for paper and 12 million barrels of oil for plastic. The production of paper bags creates 70 percent more air pollution than plastic, but plastic bags create four times the solid waste — enough to fill the Empire State Building two and a half times. And they can last up to a thousand years.
-> 
-> 
+>
+>
 
 
 
@@ -30,12 +31,12 @@ It seems like paper would be more environmentally friendly because its renewable
 
 
 
-> 
+>
 
-> 
+>
 > Both paper and plastic bags consume large amounts of natural resources and the majority will eventually end up in the landfill. Both bags can be recycled to some extent and can be utilized around the house. I’ve read several studies comparing the two choices and none of them agree.
-> 
-> 
+>
+>
 
 
 
@@ -51,9 +52,4 @@ For now I think I'm going to go with plastic on this one but with the intent to 
 
 
 
-**Update:** My friend [Natalie](http://socialbrowse.com/#url=http://socialbrowse.com/profile/view/140/) recently shared this clever video promoting careful use of your plastic bags.
-
-
-
-
-[youtube=http://www.youtube.com/watch?v=jSD21zp89zM&hl;=en&fs;=1]
+**Update:** My friend [Natalie](http://socialbrowse.com/#url=http://socialbrowse.com/profile/view/140/) recently shared this clever [video promoting careful use of your plastic bags](http://www.youtube.com/watch?v=jSD21zp89zM&hl;=en&fs;=1).

@@ -77,6 +77,12 @@ pre {
   font-size: inherit;
 }
 
+.deprication-note {
+  background-color: #FFF8F8;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
 h2 {
   margin-top: 1.5em;
   margin-bottom: .5em;

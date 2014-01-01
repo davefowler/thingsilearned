@@ -8,20 +8,13 @@ post_tag:
 - revision control
 tags:
 - revision control
+depricated: "This is an out of date and now poorly formated comparison.  At Chartio we use Bitbucket because it had free private repositiories when I started and had no money.  I now find them both to be sufficiently functional and equal in most ways."
 ---
-
 There are a lot of advantages to using a distributed revision control system as opposed to centralized.  There are also some down sides, mostly in that it can be a bit more confusing to manage.  A centralized web interface however seems to solve that problem quite nicely.
 
 Currently there are two major competitors in that space, [Github](http://github.com) and [Bitbucket](http://bitbucket.org/), that manage Git and Mercurial repositories respectively.  I've used Github for a while and recently have really started using Bitbucket and I thought I'd share some thoughts and comparisons of the two.  There are a lot of blogs that [compare Git and Mercurial](http://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/), but this is not one of those blogs.  I personally have a preference for mercurial, but for admittedly stupid reasons like it was written in python and the syntax more closely resembles SVN which I've become used to.  To me, a major differentiator in choosing one over the other is the interface or 'hub' that manages it.
 
 Below is my item by item lineup showing the differences between GitHub and Bitbucket
-
-
-
-
-
-
-
 
 GitHub
 BitBucket

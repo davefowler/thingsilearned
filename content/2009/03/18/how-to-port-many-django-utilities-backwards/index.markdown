@@ -14,6 +14,7 @@ Loading the latest will give an error claiming its unable to import Signal.  Fro
 
 I've ported two different utilities back to pre-django using this method.  In the utility there is often a signals.py file.  Take a look at the file pre and post Django 1.0 support.  In django-compress the files look like this.
 
+{% syntax python %}
 _signals.py revision 74:_
 css_filtered = object()
 js_filtered = object()
@@ -22,9 +23,10 @@ _signals.py revision 98 (HEAD):_
 from django.dispatch import Signal
 css_filtered = Signal()
 js_filtered = Signal()
+{% endsyntax %}
 
 In my experience you can simply revert back to the old signals.py and the import error will go away.
 
-svn up -r <pre django1.0 revision> signals.py
+    svn up -r <pre django1.0 revision> signals.py
 
 If you were using the signals for this utility, well they may very well be messed up.  You may also have other backwards incompatibility issues but so far this is the only one I've run into.  All other issues should be listed in the page on [Backwards Incompatibility Changes](http://code.djangoproject.com/wiki/BackwardsIncompatibleChanges).

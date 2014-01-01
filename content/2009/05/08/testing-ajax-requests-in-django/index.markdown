@@ -8,18 +8,19 @@ wordpress_id: 386
 
 Django has a really handy function on the request object that will determine if the request was an AJAX request (an XMLHttpRequest).
 
-    
-    request.is_ajax()
-
+{% syntax python %}
+request.is_ajax()
+{% endsyntax %}
 
 It simply checks whether the HTTP_X_REQUESTED_WITH header is equal to 'XMLHttpRequest', a standard that's supported by most javascript libraries.  You can read more about it and see the list of supporting frameworks [here](http://docs.djangoproject.com/en/dev/ref/request-response/#django.http.HttpRequest.is_ajax).
 
 It'd be great if the Django client had a simple client.ajax request in addition to its client.post and client.get requests, but alas it doesn't.  The tests can still be done however by changing the HTTP_X_REQUESTED_WITH header when sending  your test requests.
 
+{% syntax python %}
 >>> from django.test.client import Client
 >>> client = Client()
-
 >>> client.post("http://example.com", {"foo": "bar"}, **{'HTTP_X_REQUESTED_WITH': 'XMLHttpRequest'})
+{% endsyntax %}
 
 From there its fairly straight forward to create your own .ajax wrapper if you'd like.
 

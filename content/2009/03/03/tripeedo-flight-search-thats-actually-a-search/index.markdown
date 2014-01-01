@@ -16,12 +16,11 @@ I think its easiest just to show what's going on and then suggest that you try i
 
 ![tripeedo1](http://thingsilearned.files.wordpress.com/2009/03/tripeedo1.png)
 
-_minneap to SF tomorrow return Sunday _
+    minneap to SF tomorrow return Sunday
 
 or
 
-_2 tickets Boston Miami June 12 return 7/15
-_
+    2 tickets Boston Miami June 12 return 7/15
 
 Its ridiculously smart.  I can put in dates or city names in a variety of different formats and it just understands automatically.  I don't even have to finish typing the city name!  Tirpeedo updates its understanding in real time and will tell you by the time you're done typing "Min" that it knows that you mean "Minneapolis".
 

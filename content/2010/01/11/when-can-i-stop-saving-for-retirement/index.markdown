@@ -85,16 +85,16 @@ I assume I'd like to retire on an income of today's equivalent of 50k after tax 
 
 Without Further delays, here are the results.
 
-    
+
     Welcome to the Reverse Financial Calculator!
-    
+
     $50,000.00/year is $158,351.35/year when you are 65 assuming 3% inflation
     To make that much money from an 8.00% interest you need $1,979,391.86
-    
+
     You can stop saving up if you reach a total savings of one of the
     values in the STOP AT at the corresponding AGE.  If you want to hit
     that goal starting from 0 you need to START PAYING the listed value per year.
-    
+
     AGE     STOP AT       START PAYING
     26       $98,402.32  $98,402.32/year
     27      $106,274.50  $51,093.51/year
@@ -146,7 +146,7 @@ Pretty cool right?  The results say that if I pay about 20k a year I can stop pu
 
 I also was interested in seeing what it would take to do that same 6 year goal if I put off starting the plan.    You can see from the following results that putting it off does have significant cost to it.
 
-    
+
     START      STOP    PAYMENTS
     26           31    $19,709.20/year
     27           32    $20,665.96/year
@@ -166,8 +166,14 @@ _
 
 _If your parents had gone cheap with your baby clothes, crib and stroller and instead put 10k a year away from the day you were born, you'd be set for retiring at 65 on just your 2nd birthday!_
 
-    
+
     AGE    STOP AT
     0       $28,691.65  $28,691.65/year
     1       $30,986.98  $14,897.59/year
     2       $33,465.94  $10,308.63/year
+
+
+### Update Jan 1, 2014:
+Some friends of mine have started a company that [manages your retirement plan][futureadvisor].  They're brillint guys who have created a fantastic interface and intelligent algorithms.  If you're interested in optimizing your retirement check out [FutureAdvisor][futureadvisor].
+
+[futureadvisor]: http://futureadvisor.com "Optimize for Retirement"
