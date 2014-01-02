@@ -1,3 +1,7 @@
+{% macro render_article(res, class=None) %}
+  {% refer to res.relative_path as post %}
+  {{ post.article }}
+{% endmacro %}
 
 {% macro render_nav(menu, cls=None) -%}
 {% if menu -%}

@@ -26,13 +26,25 @@ description: Here's a list of some things I've learned.
   <div class="span7" id="posts">
     <ul>
     {% for thing in site.content.walk_resources_sorted_by_posts() %}
-      {% if not resource.meta.depricated %}
+      {% if not thing.meta.depricated %}
       <li class="post {% if thing.meta.external_url %}external{% endif %}">
         <a href="{{ thing.meta.external_url or content_url(thing.url) }}">{{ thing.meta.title }}</a>
       </li>
       {% endif %}
     {% endfor %}
     </ul>
+
+    <h4 id="depricated-posts-header"><a href="#">Depricated Posts</a></h4>
+    <ul class='depricated-posts hide'>
+    {% for thing in site.content.walk_resources_sorted_by_posts() %}
+      {% if thing.meta.depricated %}
+      <li class="post {% if thing.meta.external_url %}external{% endif %}">
+        <a href="{{ thing.meta.external_url or content_url(thing.url) }}">{{ thing.meta.title }}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+
   </div>
   <div class="span5">
 
@@ -60,8 +72,9 @@ description: Here's a list of some things I've learned.
 </div>
 
 <script src="/media/js/libs/jquery-2.0.2.min.js"></script>
-
 <script type="text/javascript">
+
+// internal and external post filters
 $(document).ready(function() {
   $('.key .external').click(function(e) {
     e.preventDefault();
@@ -73,5 +86,13 @@ $(document).ready(function() {
     $('.key .internal').toggleClass('opaque');
     $('.post').not('.external').toggleClass('hide');
   });
+});
+
+// Toggle depricated posts
+$('#depricated-posts-header').click(function(e) {
+  e.preventDefault();
+  $("#dep-icon").toggleClass('glyphicon-chevron-down');
+  $("#dep-icon").toggleClass('glyphicon-chevron-up');
+  $("ul.depricated-posts").toggleClass('hide');
 });
 </script>

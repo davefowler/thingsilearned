@@ -17,7 +17,9 @@
              {{ resource.meta.depricated }}
            </div>
          {% endif %}
+         {% mark article %}
          {% filter markdown %}{% block thing_content %}{% endblock %}{% endfilter %}
+         {% endmark %}
          {% filter markdown %}{% block after_thing_content %}{% endblock %}{% endfilter %}
          </article>
      </div>

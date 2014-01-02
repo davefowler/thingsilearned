@@ -61,6 +61,11 @@ publisher:
             url: git@github.com:davefowler/davefowler.github.com.git
 
 sorter:
+    all:
+        attr:
+            - meta.date
+        reverse: true
+
     posts:
         attr:
             - meta.date

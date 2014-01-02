@@ -81,6 +81,7 @@ pre {
   background-color: #FFF8F8;
   padding: 10px;
   border: 1px solid #eee;
+  margin-bottom: 16px;
 }
 
 h2 {
@@ -138,4 +139,8 @@ li {
 
 .code figcaption {
   display: none;
+}
+
+.content {
+  margin-bottom: 50px;
 }
