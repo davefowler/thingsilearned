@@ -26,8 +26,8 @@ default_block:
 
     {% for res in resource.node.walk_resources_sorted_by_all() %}
         <entry>
-            <title type="html">{{ res.meta.title }}</title>
-            <author><name>{{ res.meta.author }}</name></author>
+            <title type="html">{{ res.meta.title|escape }}</title>
+            <author><name>{{ res.meta.author|escape }}</name></author>
             <link href="{{ SITE_URL }}{{ content_url(res.url) }}"/>
             <updated>{{ res.meta.date }}</updated>
             <published>{{ res.meta.date }}</published>
