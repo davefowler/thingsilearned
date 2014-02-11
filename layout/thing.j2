@@ -1,12 +1,16 @@
 {% extends "base.j2" %}
 
+
+{% block extraheader %}
+  {% if resource.meta.image %}
+    <div class="hero-unit"></div>
+  {% endif %}
+{% endblock %}
+
 {% block main %}
 <div class="row">
      <div class="span10">
          <article class="thing">
-          {% if resource.meta.image %}
-           <div class="hero-unit" style="background-image: url('{{resource.meta.image }}');"></div>
-         {% endif %}
 
          <div class='page-header'>
                <h1>{{ resource.meta.title }}<small>by {{ resource.meta.author }} on {{ resource.meta.date }}</small></h1>

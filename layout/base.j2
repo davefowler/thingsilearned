@@ -31,6 +31,7 @@
 </head>
 <body id="{{ resource.meta.id if resource.meta.id else resource.slug }}">
   {% block content %}
+<div class="container-fluid" {% if resource.meta.image %}style="background-image: url('{{ resource.meta.image }}');"{% endif %}>
   <div class="container">
       {% block container %}
       <div id="main" role="main">
@@ -52,11 +53,16 @@
               </div>
           {%- endblock %}
           </header>
-          <section class="content">
-          {% block main %}
-          {% endblock main %}
-          </section>
-      </div>
+       </div>
+       {% block extraheader %}{% endblock %}
+   </div>
+
+</div>
+<div class="container">
+  <section class="content">
+    {% block main %}{% endblock main %}
+  </section>
+</div>
     {% endblock container %}
   </div> <!--! end of #container -->
   {% endblock content%}

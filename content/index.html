@@ -1,15 +1,20 @@
 ---
 extends: base.j2
-default_block: main
+default_block:
 title: Things I Learned
-description: Here's a list of some things I've learned.
+description: Here's a list of some things I've Learned.
+image: /media/images/hero.png
 ---
-
+{% block extraheader %}
 <div class="row hero-unit">
   <div class="span9 offset2">
-    I learn the best when I write about what I'm learning.  Here I share some of my writing, essays, and projects.  Lately I've been focused on <a href="http://chartio.com">Chartio.com</a> and publically post considerably less.
+    I learn the best when I write about what I'm learning.  Here I share some of my writing, essays, and projects.  Lately I've been focused on <a href="http://chartio.com">Cloud Business Intelligence</a> at Chartio and publically post considerably less.
   </div>
 </div>
+
+{% endblock %}
+
+{% block main %}
 
 <div class="row" id="section-titles">
   <div class="span2"><h4>Posts</h4></div>
@@ -128,3 +133,5 @@ $('#depricated-posts-header').click(function(e) {
   $("ul.depricated-posts").toggleClass('hide');
 });
 </script>
+
+{% endblock %}
