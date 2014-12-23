@@ -31,7 +31,7 @@
 </head>
 <body id="{{ resource.meta.id if resource.meta.id else resource.slug }}">
   {% block content %}
-<div class="container-fluid" {% if resource.meta.image %}style="background-image: url('{{ resource.meta.image }}');"{% endif %}>
+<div class="container-fluid" {% if resource.meta.fullpageimage %}style="background-image: url('{{ resource.meta.fullpageimage }}');"{% endif %}>
   <div class="container">
       {% block container %}
       <div id="main" role="main">
