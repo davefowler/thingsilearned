@@ -1,1 +1,2 @@
+rm -fr */.#*; rm -fr */*/.#*; rm -fr */*/*.#*
 rm -fr deploy/*; ../chartio-hyde/hyde/h gen; ../chartio-hyde/hyde/h serve -p 8081;
