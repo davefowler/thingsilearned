@@ -1,8 +1,10 @@
 body {
-  font-size: 20px;
+  font: normal 18px/40px Georgia, Times, serif;
+  color: #333;
+  /*font-size: 20px;
   line-height: 1.5em;
   font-family: "nimbus-sans",sans-serif;
-  /* font-family: "ff-tisa-web-pro",Georgia,Cambria,"Times New Roman",Times,serif; */
+   font-family: "ff-tisa-web-pro",Georgia,Cambria,"Times New Roman",Times,serif; */
   /* font-family: Georgia,Cambria,"Times New Roman",Times,serif; */
 }
 
@@ -39,7 +41,14 @@ a:hover {
 
 blockquote {
   margin: 20px;
+  font-weight: 50;
 }
+
+blockquote p, blockquote ul {
+   font: italic 18px/40px Georgia, Times, serif;
+   font-weight: 50;
+}
+
 
 .header h3 { color: inherit; }
 
