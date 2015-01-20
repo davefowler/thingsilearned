@@ -3,7 +3,7 @@
 
 {% block extraheader %}
   {% if resource.meta.image %}
-    <div class="hero-unit"></div>
+    <div class="hero-unit" style="background-image: url('{{ resource.meta.image }}');"></div>
   {% endif %}
 {% endblock %}
 
