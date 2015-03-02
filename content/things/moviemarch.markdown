@@ -7,7 +7,7 @@ category: thought
 
 For the month of March I've decided to watch no movies or TV shows.  I really feel the time I spend watching is wasted, but I needed a dramatic goal to kick the habit.
 
-I've titled it *Movieless March* and with the re-claimed time tonight already, I've finished a great deal of work and started a [book that I have been meaning to get to][book].  Serendipitously, the first excerpt of the book is from another titled ["The Moviegoer"][moviegoer].  It is just a fantastic piece for so many reasons that I wanted to share it here:
+I've titled it *Movieless March* and with the re-claimed time tonight already, I've finished a great deal of work and started a [book that I have been wanting to get to][book].  Serendipitously, the first excerpt of the book is from another titled ["The Moviegoer"][moviegoer].  It is just a fantastic piece for so many reasons that I wanted to share it here:
 
 > ## The Moviegoer
 > By Walker Percy
