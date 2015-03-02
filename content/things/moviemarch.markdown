@@ -5,13 +5,11 @@ comments: true
 category: thought
 ---
 
-I really hate that I really like movies and television.  I try to keep it out of my life but have a tough time of not spending a few hours a day watching a movie or show.  It tends to be something I do when I'm too tired to think or do anything else, which happens to also be when I lack the most self control.  At that point I should just go to bed but instead I waste time infront of the screen and find little enjoyment from it.
+For the month of March I've decided to watch no movies or TV shows.  I really feel the time I spend watching is wasted, but I needed a dramatic goal to kick the habit.
 
-I've read a lot on the methods of [habit changing][habit], and though unconventional, the most successful efforts I've made in the past have involved cold turkey, a month of prioritized focus and a catchy/memorable title.
+I've titled it *Movieless March* and with the re-claimed time tonight already, I've finished a great deal of work and started a [book that I have been meaning to get to][book].  Serendipitously, the first excerpt of the book is from another titled ["The Moviegoer"][moviegoer].  It is just a fantastic piece for so many reasons that I wanted to share it here:
 
-So I've decided to have a *Movieless March*, where I watch no movies or TV shows of any kind for at least 31 days.  With the spare time tonight already, I started a book I've been meaning to get to and came across this fantastic excerpt from a book serendipitously titled ["The Moviegoer"][moviegoer]:
-
-> # The Moviegoer
+> ## The Moviegoer
 > By Walker Percy
 >
 > What is the nature of the search? you ask.
@@ -34,3 +32,4 @@ So I've decided to have a *Movieless March*, where I watch no movies or TV shows
 
 [moviegoer]: http://en.wikipedia.org/wiki/The_Moviegoer
 [habit]: http://www.amazon.com/The-Power-Habit-What-Business/dp/081298160X
+[book]: https://books.google.com/books?id=co5fLl9dj-4C&pg=PT3&lpg=PT3&dq=life+a+user%27s+manual+john+miller&source=bl&ots=3zmJNBEnRs&sig=tOXmghUE4PJESQWDkWJhD3Fn5RQ&hl=en&sa=X&ei=CC30VLqMN9O4ogSVrYHIBg&ved=0CDEQ6AEwAw#v=onepage&q=life%20a%20user's%20manual%20john%20miller&f=false "Life"
