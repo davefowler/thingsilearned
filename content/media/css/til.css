@@ -43,7 +43,14 @@ a:hover {
 
 blockquote {
   margin: 20px;
+  font-weight: 50;
 }
+
+blockquote p, blockquote ul {
+   font: italic 18px/40px Georgia, Times, serif;
+   font-weight: 50;
+}
+
 
 .header h3 { color: inherit; }
 
@@ -122,7 +129,7 @@ li {
 }
 
 .key ul {
-  width: 220px;
+  width: 250px;
 }
 
 .key ul li {
