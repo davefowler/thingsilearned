@@ -7,13 +7,23 @@
   {% endif %}
 {% endblock %}
 
+{% block scripts %}
+  <!-- insert to make titles full page width -->
+  <script type="text/javascript">
+    console.log('scriptasdf dog');
+    /* Make titles as wide as their container */
+    var title = document.getElementById("thing-title");
+    title.style.fontSize = (110/title.innerHTML.length) + "vw";
+  </script>
+{% endblock %}
+
 {% block main %}
 <div class="row">
      <div class="span10">
          <article class="thing">
 
          <div class='page-header'>
-               <h1>{{ resource.meta.title }}<small>by {{ resource.meta.author }} on {{ resource.meta.date }}</small></h1>
+               <h1><span id="thing-title">{{ resource.meta.title }}</span><small>by {{ resource.meta.author }} on {{ resource.meta.date }}</small></h1>
          </div>
          {% if resource.meta.depricated %}
            <div class="deprication-note">
