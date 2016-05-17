@@ -17,14 +17,14 @@ fullpageimage: /media/images/hero.png
 {% block main %}
 
 <div class="row" id="section-titles">
-  <div class="span2"><h4>Posts</h4></div>
+  <div class="span2"><h2>Posts</h2></div>
   <div class="span5 key">
     <ul>
       <li class="external"><a href="#">external</a></li>
       <li class="internal"><a href="#">internal</a></li>
     </ul>
   </div>
-  <div class="span5"><h4>Essays</h4></div>
+  <div class="span5"><h2>Essays</h2></div>
 </div>
 
 <div class="row" id="sections">
@@ -39,7 +39,7 @@ fullpageimage: /media/images/hero.png
     {% endfor %}
     </ul>
 
-    <h4 id="depricated-posts-header"><a href="#">Depricated Posts</a></h4>
+    <h2 id="depricated-posts-header"><a href="#">Depricated Posts</a></h2>
     <ul class='depricated-posts hide'>
     {% for thing in site.content.walk_resources_sorted_by_posts() %}
       {% if thing.meta.depricated %}
@@ -63,7 +63,7 @@ fullpageimage: /media/images/hero.png
       </ul>
     </div>
 
-    <div><h4>Projects</h4></div>
+    <div><h2>Projects</h2></div>
 
     <div id="projects">
       <ul>
@@ -75,7 +75,7 @@ fullpageimage: /media/images/hero.png
       </ul>
     </div>
 
-    <div><h4>Influences</h4></div>
+    <div><h2>Influences</h2></div>
     <div id="influences">
       <ul>
         <li>Data

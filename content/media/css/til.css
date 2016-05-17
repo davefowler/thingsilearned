@@ -80,7 +80,6 @@ blockquote p, blockquote ul {
 
 #section-titles {
   margin-bottom: 10px;
-  padding-top: 50px;
 }
 
 #sections h4 {
@@ -126,7 +125,7 @@ li {
 .key {
   font-size: .8em;
   line-height: 30px;
-  margin-top: 8px;
+  margin-top: 54px;
 }
 
 .key ul {
