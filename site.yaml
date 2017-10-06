@@ -57,8 +57,8 @@ suffix:
 publisher:
         github:
             type: hyde.ext.publishers.dvcs.Git
-            path: ../davefowler.github.com
-            url: git@github.com:davefowler/davefowler.github.com.git
+            path: ../davefowler.github.io
+            url: git@github.com:davefowler/davefowler.github.io.git
 
 sorter:
     all:
